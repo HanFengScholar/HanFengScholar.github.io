@@ -39,7 +39,7 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #ffff00"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -91,7 +91,7 @@
 			<!-- 网易云音乐插件 -->
 
 	<div style="position:absolute; bottom:120px left:auto; width:85%">
-		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=52 src="//music.163.com/outchain/player?type=2&id=167876&auto=1&height=66"></iframe>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=240 height=104 src="//music.163.com/outchain/player?type=2&id=167876&auto=1&height=66"></iframe>
 	</div>
 
 		</nav>
@@ -102,7 +102,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #ffff00"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -186,8 +186,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="博客预览"><a href="#博客预览" class="headerlink" title="博客预览"></a>博客预览</h1><h2 id="有一篇文章找不到源文件了，只有访问我遗失的博客网站了"><a href="#有一篇文章找不到源文件了，只有访问我遗失的博客网站了" class="headerlink" title="有一篇文章找不到源文件了，只有访问我遗失的博客网站了"></a>有一篇文章找不到源文件了，只有访问我遗失的博客网站了</h2><p><a target="_blank" rel="noopener" href="https://scholar-hf.github.io/">韩枫</a></p>
-
+        <h1 id="博客预览"><a href="#博客预览" class="headerlink" title="博客预览"></a>博客预览</h1>
+        
+          <a class="article-more-a" href="/2023/04/25/hello-world/#more">more >></a>
+        
       
 
       
@@ -267,81 +269,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="第一周学习"><a href="#第一周学习" class="headerlink" title="第一周学习"></a>第一周学习</h1><h2 id="10-23："><a href="#10-23：" class="headerlink" title="10.23："></a>10.23：</h2><h3 id="今天搞了一下Markdown的使用-1-："><a href="#今天搞了一下Markdown的使用-1-：" class="headerlink" title="今天搞了一下Markdown的使用[^1]："></a>今天搞了一下Markdown的使用[^1]：</h3><h4 id="1-目录与换行："><a href="#1-目录与换行：" class="headerlink" title="1. 目录与换行："></a>1. 目录与换行：</h4><blockquote>
-<p> 俩个空格加回车可以换行，#加上空格代表标题，不同数目等级不同  </p>
-</blockquote>
-<h4 id="2-“-”与”-”："><a href="#2-“-”与”-”：" class="headerlink" title="2. “*”与”_”："></a>2. “*”与”_”：</h4><blockquote>
-<p> 1.左右各1个：<em>or_包括的文本使文本为：<em>CSDN</em><br>      2.左右各2个：</em>or_包括的文本使文本为：<strong>CSDN</strong> </p>
-</blockquote>
-<h4 id="3-删除线与高亮："><a href="#3-删除线与高亮：" class="headerlink" title="3. 删除线与高亮："></a>3. 删除线与高亮：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">==文本==即变高亮，但是可能有些软件不支持，vscode是可以的（因为我用的就是这个）</span><br><span class="line">~~文本~~会自动添加删除线  </span><br></pre></td></tr></table></figure>
-<p>&#x3D;&#x3D;<del>困扰我的最大的问题就是列表嵌套如何跳出来—<em><strong>按俩次enter</strong></em></del>&#x3D;&#x3D;    </p>
-<h4 id="4-无序列表与有序列表："><a href="#4-无序列表与有序列表：" class="headerlink" title="4. 无序列表与有序列表："></a>4. 无序列表与有序列表：</h4><ul>
-<li>无序列表使用星号(*)，加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容</li>
-<li>有序列表用“1.”后面加上一个空格，再填写内容</li>
-<li>列表嵌套只需在子列表中的选项前面添加两个或四个空格即可，例如:  <ol>
-<li>目标一：<ul>
-<li>完成Markdown的学习；</li>
-<li>使用Markdown记录笔记；</li>
-</ul>
-</li>
-<li>目标二：<ul>
-<li>完成C语言课程；</li>
-<li>完成课后作业。</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<h4 id="5-代码块："><a href="#5-代码块：" class="headerlink" title="5. 代码块："></a>5. 代码块：</h4><ul>
-<li>在markdown想要敲代码也是可以的(支持多种语言)  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*用```加语言即可输入代码：例:```c c语言代码块 ```</span></span><br><span class="line"><span class="comment">  单语句代码:`代码`</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world&quot;</span>);<span class="comment">//  ```表示代码块可以指定语言 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line">#### <span class="number">6.</span> 链接：  </span><br><span class="line">* 如果想要添加链接可以像这样用[]表示名字（）里输入链接，例如`[CSND](https:<span class="comment">//www.csdn.net/)`，实现结果[CSND](https://www.csdn.net/)  </span></span><br><span class="line">#### <span class="number">7.</span> 引用：</span><br><span class="line">&gt; 那么这个框是怎么实现的呢？---用“&gt;”加空格即可，多个“&gt;”可以进行嵌套</span><br><span class="line">#### <span class="number">8.</span> 扩展语法：</span><br><span class="line">* 上标:用^^包围</span><br><span class="line">* 下标:用~~包围</span><br><span class="line">`H~<span class="number">2</span>~O <span class="number">2</span>^<span class="number">20</span>^`:H~<span class="number">2</span>~O <span class="number">2</span>^<span class="number">20</span>^  </span><br><span class="line">#### <span class="number">9.</span>任务列表：</span><br><span class="line">* 用- [] 来表示任务[]中要添加一个空格  </span><br><span class="line">- [x] 学习Markdown的简单用法</span><br><span class="line">- [x] 使用Markdown写CSDN</span><br><span class="line">- [ ] 学习C语言</span><br><span class="line">- [ ] 完成作业</span><br><span class="line">#### <span class="number">10.</span>制作表格：</span><br><span class="line">* 用|制作表格:表示对齐</span><br><span class="line"></span><br><span class="line">|学号|姓名|年龄|</span><br><span class="line">|:---|---:|:---:|</span><br><span class="line">|<span class="number">00001</span>|CSDNlover|未知|</span><br><span class="line">#### <span class="number">11.</span>emoji表情：</span><br><span class="line">`:sweat_smile:`::sweat_smile:</span><br><span class="line">==想要更多emoji推荐访问这个网址[emoji](https:<span class="comment">//emojipedia.org/apple/)进行copy==</span></span><br><span class="line">#### <span class="number">12.</span>分割线：</span><br><span class="line">* 用三个*或-或_添加分割线</span><br><span class="line">---</span><br><span class="line">当然这些只是学习了Markdown的基本知识，我认为这些已经足够让我平时记录学习了，毕竟对许多刚开始学习编程的小白来说学Markdown只是一个学习小插曲，不必深入花费太多精力</span><br><span class="line">[^<span class="number">1</span>]:与C语言一样一定要用英文键盘下输入的符号才可以哦！  </span><br><span class="line">## C语言[^<span class="number">2</span>]：</span><br><span class="line">（因为几个月前已经看过一次课，这周根据安排进行重刷，也是自己对知识的巩固以及查缺补漏）</span><br><span class="line"><span class="number">1.</span> <span class="built_in">printf</span>----print format(格式化 输出) </span><br><span class="line"><span class="number">2.</span> \n\后面的\是告诉电脑这里和下一行是一起的</span><br><span class="line">&gt;因此<span class="built_in">printf</span>还可以这样写喔</span><br><span class="line">```c  </span><br><span class="line">	print\</span><br><span class="line">f(<span class="string">&quot;CSDN&quot;</span>)</span><br><span class="line">\t tab键</span><br><span class="line">\b 退格键</span><br><span class="line">\a 报警声</span><br><span class="line">\g 省略浮点数小数后的<span class="number">0</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="3">
-<li>补码：</li>
-</ol>
-<ul>
-<li>正数的补码是该数的二进制形式</li>
-<li>复数由正数按位取反然后再加1<br><code>例如00000111-&gt;11111001</code></li>
-</ul>
-<ol start="4">
-<li>&amp;&amp; and || 有时不会对内容全部判断：例如<code>（a = 0）&amp;&amp; (b = 5);</code>当a&#x3D;0读了已经是假就不会读b&#x3D;5，则b等于原来的值</li>
-<li>语句：</li>
-</ol>
-<ul>
-<li>switch语句：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span></span><br><span class="line">&#123;</span><br><span class="line">      <span class="keyword">case</span> 常量表达式: 语句;</span><br><span class="line">      <span class="keyword">default</span>: 语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>do while语句：<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">      语句;</span><br><span class="line">&#125;<span class="keyword">while</span>(判断);<span class="comment">// ; 尤其重要</span></span><br></pre></td></tr></table></figure></li>
-<li>continue语句：跳过后面内容重新循环</li>
-<li>条件运算符<br>语句1 ？ 语句2 ： 语句3；<br>max &#x3D; a &gt; b ? a : b;</li>
-</ul>
-<ol start="6">
-<li>数组：</li>
-</ol>
-<ul>
-<li>数组不能被动态定义，c89中要提前分配空间</li>
-</ul>
-<ol start="7">
-<li>string头文件：</li>
-</ol>
-<ul>
-<li>获取字符串长度：strlen（忽略\0）</li>
-<li>拷贝字符串：strcpy,strncpy</li>
-<li>连接字符串：strcat,strncat</li>
-<li>比较字符串：strcmp,strncmp  </li>
-<li>实例访问(C:\Users\丁海峰\Desktop\vscode)</li>
-</ul>
-<h2 id="作业："><a href="#作业：" class="headerlink" title="作业："></a>作业：</h2><ol>
-<li>求1-n 的累加和， n 为整数。<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> n, i, sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>( i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		sum = i + sum;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入一行字符求其中 字母个数、数字的个数、空格的个数及其他字符的个数<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> zimu = <span class="number">0</span>, shuzi = <span class="number">0</span>, kongge = <span class="number">0</span>, others = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> ch;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">while</span> (( ch = getchar()) != <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">	&#123;	</span><br><span class="line">		<span class="keyword">if</span>( ch &gt;= <span class="number">0</span> &amp;&amp; ch &lt;= <span class="number">127</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>( ch != <span class="number">13</span> )</span><br><span class="line">			&#123;				</span><br><span class="line">				<span class="keyword">if</span>( ch &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;z&#x27;</span> )</span><br><span class="line">				&#123;</span><br><span class="line">					zimu++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>( ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span> )</span><br><span class="line">				&#123;</span><br><span class="line">					shuzi++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> <span class="keyword">if</span>( ch == <span class="string">&#x27; &#x27;</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					kongge++;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span>  </span><br><span class="line">				&#123;</span><br><span class="line">					others++;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span> </span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">goto</span> A;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">A:	<span class="built_in">printf</span>(<span class="string">&quot;字母的个数为:%d\n数字的个数为:%d\n空格的个数为:%d\n其他字符的个数为:%d\n&quot;</span>, zimu, shuzi, kongge, others);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<ul>
-<li>a:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">prime</span> <span class="params">(<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i, j, a = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>( i = <span class="number">2</span>; i &lt; (<span class="type">int</span>)n/<span class="number">2</span>; i++ )</span><br><span class="line">	&#123;</span><br><span class="line">		j = n % i;</span><br><span class="line">		<span class="keyword">if</span>(j == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			a += <span class="number">1</span>;</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(a &gt;= <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> n, answer;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	</span><br><span class="line">	answer = prime(n);</span><br><span class="line">	<span class="keyword">if</span>(answer == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;this is a prime&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;this is not a prime&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>b:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">prime</span> <span class="params">(<span class="type">int</span> n)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> i, j, a = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>( i = <span class="number">2</span>; i &lt; (<span class="type">int</span>)n/<span class="number">2</span>; i++ )</span><br><span class="line">	&#123;</span><br><span class="line">		j = n % i;</span><br><span class="line">		<span class="keyword">if</span>(j == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			a += <span class="number">1</span>;</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(a &gt;= <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;this is not a prime&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;this is a prime&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">	</span><br><span class="line">	prime(n);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="4">
-<li>输入一行字符，统计其中 数字的个数。要求用函数。<br>函数原型 int number（ char ch) ;<br>函数功能 如果 ch 是 ‘0’—‘9’ ， 函数返回值是 1 否则是 0 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">number</span><span class="params">(<span class="type">char</span> ch)</span></span><br><span class="line">&#123;	</span><br><span class="line">	<span class="keyword">if</span>( ch &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; ch &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="type">char</span> ch;</span><br><span class="line">	<span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(( ch = getchar()) != <span class="string">&#x27;\n&#x27;</span> )</span><br><span class="line">	&#123;</span><br><span class="line">		num = num + number(ch);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>, num);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-由于递归没有学嘿嘿就只做前四题咯<br>[^2]:只学习到了指针以前的课程。。。</li>
-</ol>
-
+        <h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1>
+        
+          <a class="article-more-a" href="/2023/04/26/Markdown/#more">more >></a>
+        
       
 
       
@@ -405,103 +336,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><h2 id="2023年2月17日-4月2日："><a href="#2023年2月17日-4月2日：" class="headerlink" title="2023年2月17日-4月2日："></a>2023年2月17日-4月2日：</h2><h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>花了俩个月深入学习了Java， 有C语言基础的我感觉Java上手很快，话不多说，直接上总结</p>
-<h3 id="2-Java开发工具"><a href="#2-Java开发工具" class="headerlink" title="2. Java开发工具"></a>2. Java开发工具</h3><p><strong>javac</strong>： java编辑器<br><strong>java</strong>： java解释器<br><strong>jdb</strong>： java调试器<br><strong>javap</strong>： 主要用于反编译<br><strong>javadoc</strong>：文档生成器  </p>
-<h3 id="3-cmd命令"><a href="#3-cmd命令" class="headerlink" title="3. cmd命令"></a>3. cmd命令</h3><ul>
-<li><strong>E:</strong> ：切换盘符</li>
-<li><strong>dir</strong> ：显示文件</li>
-<li><strong>cd</strong> ：进入</li>
-<li><strong>cd..</strong> ：后退</li>
-<li><strong>cd\目录\目录</strong>： 多层进入</li>
-<li><strong>cls</strong> ： 清空界面</li>
-<li><strong>exit</strong> ：退出</li>
-</ul>
-<h3 id="4-java工具Notepad"><a href="#4-java工具Notepad" class="headerlink" title="4. java工具Notepad"></a>4. java工具Notepad</h3><p>配置notepad：设置—首选项—新建—window，java，ANSI</p>
-<h3 id="5-变量命名默认规则"><a href="#5-变量命名默认规则" class="headerlink" title="5. 变量命名默认规则"></a>5. 变量命名默认规则</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">命名</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">接口和类名</td>
-<td align="center">首字母大写</td>
-</tr>
-<tr>
-<td align="center">方法名和变量名</td>
-<td align="center">首个字母小写，其余大写</td>
-</tr>
-<tr>
-<td align="center">常量名</td>
-<td align="center">全大写</td>
-</tr>
-<tr>
-<td align="center">包</td>
-<td align="center">小写</td>
-</tr>
-</tbody></table>
-<h3 id="6-导包类（这里Scanner为例子）"><a href="#6-导包类（这里Scanner为例子）" class="headerlink" title="6. 导包类（这里Scanner为例子）"></a>6. 导包类（这里Scanner为例子）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">Scanner 名 = new Scanner(System.in);</span><br><span class="line">int 变量 = 名.nextInt();  </span><br></pre></td></tr></table></figure>
-<h3 id="7-语法（与C类似，-由于是给自己看的，-只写不一样的）"><a href="#7-语法（与C类似，-由于是给自己看的，-只写不一样的）" class="headerlink" title="7. 语法（与C类似， 由于是给自己看的， 只写不一样的）"></a>7. 语法（与C类似， 由于是给自己看的， 只写不一样的）</h3><ul>
-<li>swich可以简化： case -&gt; {}</li>
-<li>数组定义 ： int[] arrey &#x3D; new int[]{}; or int arrey[] &#x3D; {};</li>
-<li>private: 只能在本类中访问（可以用this区别全局变量和局部变量）</li>
-</ul>
-<h3 id="8-构造器"><a href="#8-构造器" class="headerlink" title="8. 构造器"></a>8. 构造器</h3><p>构造方法：与类名相同，无返回值连void都没有，需要写无参构造和有参构造，系统默认有一个无参构造<br>构造代码块先于构造方法执行<br>静态代码块static{}随着类的加载而加载，只出现一次，一般用于数据初始化</p>
-<h3 id="9-继承"><a href="#9-继承" class="headerlink" title="9. 继承"></a>9. 继承</h3><p>java只能单继承不能多继承，但支持多层继承<br>object是祖宗类<br>this(本类)<br>super(父类)<br>重写（Override）和重载(overload)： 俩者参数列表区别<br>public&gt;protected&gt;(default)&gt;private</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class zi extends fu&#123;</span><br><span class="line">    //zi类选择重写fu类方法(抽象类必须重写)</span><br><span class="line">    //构造方法先fu后zi, super只能有一个且必须是第一个</span><br><span class="line">    //final变量为常量类不能被继承，方法不能被覆盖</span><br><span class="line">    //抽象类不能new,抽象方法所在的类必是抽象类</span><br><span class="line">    //必须用一个子类继承抽象父类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="10-接口-interface"><a href="#10-接口-interface" class="headerlink" title="10. 接口(interface)"></a>10. 接口(interface)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//实现接口</span><br><span class="line">class GameJFrame extends JFrame implements KeyListener, ActionListener&#123;&#125;</span><br><span class="line">public interface A &#123;</span><br><span class="line">    //接口默认方法</span><br><span class="line">    public default void method() &#123;</span><br><span class="line">        System.out.println(&quot;A&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //抽象方法</span><br><span class="line">    public void actionPerformed(ActionEvent e);</span><br><span class="line">    //静态方法（只能通过接口名调用）</span><br><span class="line">    public static void show()&#123;</span><br><span class="line">        System.out.println(&quot;static&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //私有方法</span><br><span class="line">    private (static) void method2()&#123;</span><br><span class="line">        //重复代码块</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">接口无静态代码块和构造方法</span><br><span class="line">一个类可以有多个接口，重名必须重写，调用接口.super.方法</span><br><span class="line">父类与接口方法冲突，优先父类</span><br></pre></td></tr></table></figure>
-<h3 id="11-多态"><a href="#11-多态" class="headerlink" title="11. 多态"></a>11. 多态</h3><p>多态成员方法：编译看左边，运行看右边<br>多态成员变量：编译看左边，运行看左边</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Animal a = new Dog();</span><br><span class="line">if(a instanceof Dog)&#123;&#125;//比较类型(bool类型)</span><br><span class="line">if(a instanceof Dog d)&#123;&#125;//比较类型true则强转为d</span><br></pre></td></tr></table></figure>
-<h3 id="12-内部类"><a href="#12-内部类" class="headerlink" title="12. 内部类"></a>12. 内部类</h3><ul>
-<li>内部类<ol>
-<li>成员内部类</li>
-<li>静态内部类</li>
-<li>局部内部类</li>
-<li>匿名内部类<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Outer.Inner oi = new Outer().new Inner();</span><br><span class="line">//外部成员与内部成员重名</span><br><span class="line">Outer.this.变量</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-<h3 id="13-异常"><a href="#13-异常" class="headerlink" title="13. 异常"></a>13. 异常</h3><h5 id="Exception分为："><a href="#Exception分为：" class="headerlink" title="Exception分为："></a>Exception分为：</h5><ul>
-<li>运行时异常（RuntimeException）</li>
-<li>编译时异常</li>
-</ul>
-<h5 id="异常的作用："><a href="#异常的作用：" class="headerlink" title="异常的作用："></a>异常的作用：</h5><ul>
-<li>查询bug的关键参考信息 </li>
-<li>作为一种特殊返回值，以便通知调用者底层的执行情况</li>
-</ul>
-<h5 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h5><ul>
-<li>JVM默认处理<ul>
-<li>把异常的名称，原因，错误位置输出在控制台上</li>
-<li>后序代码停止执行</li>
-</ul>
-</li>
-<li>自己处理（捕获异常）  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//可能出现异常的代码;</span></span><br><span class="line">    <span class="comment">//系统自动创建错误对象，然后拿到catch中对比</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类名 变量名)&#123;</span><br><span class="line">    <span class="comment">//异常处理的代码;</span></span><br><span class="line">    <span class="comment">//如果能接收及被捕获，则执行对应catch代码）</span></span><br><span class="line">    <span class="comment">//Throwtable的成员方法</span></span><br><span class="line">        <span class="comment">//public String getMessage(): 返回详细信息</span></span><br><span class="line">        <span class="comment">//public String toString(): 返回此可抛出的简短描述</span></span><br><span class="line">        <span class="comment">//public void printStackTrace():利用System.err.println打印红色</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    <span class="comment">//无论是否出现异常，该代码块中代码都会执行</span></span><br><span class="line">    sout(balabala);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以让程序继续往下执行，不会停止</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>如果try中没有遇到问题则正常执行</li>
-<li>如果try中多个问题则多个catch（父类异常写下面）否则默认JVM</li>
-<li>try中遇到问题try中后面的代码不运行</li>
-</ol>
-</li>
-<li>抛出处理<ul>
-<li>throws：方法开始时告诉使用者可能会出的异常(RuntimeException可不写)</li>
-<li>throw：方法中抛出异常（创建对象）</li>
-</ul>
-</li>
-</ul>
-<h5 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h5><ul>
-<li>定义类</li>
-<li>写继承关系</li>
-<li>空参构造</li>
-<li>带参构造</li>
-</ul>
-<h3 id="14-函数环节"><a href="#14-函数环节" class="headerlink" title="14. 函数环节"></a>14. 函数环节</h3><ul>
-<li>数组求长度： arrey.length;</li>
-<li>Math类(API文档)</li>
-<li>nextLine();单独讲一下， next()遇到空格就不会读取字符串了，但nextLine()只找回车<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//返回类型 用法</span><br><span class="line">boolean a.equals(b)//比较字符串内容</span><br><span class="line">boolean a.equalsIgnoreCase(b);//忽略大小写比较</span><br><span class="line">char chaAt(int index);//根据索引返回字符</span><br><span class="line">int length();//返回长度</span><br><span class="line">String substring(int beginIndex, int endIndex);//截取（包头不包尾）</span><br><span class="line">String substring(int beginInde);//截取到末尾</span><br><span class="line">String replace(新， 旧);//替换</span><br><span class="line"></span><br><span class="line">//StringBuilder</span><br><span class="line">StringBuilder sb = new StringBuilder();</span><br><span class="line">sb.append(任意类型);//添加</span><br><span class="line">sb.reverse();//反转内容</span><br><span class="line">String toString();//转化为String</span><br><span class="line"></span><br><span class="line">//StringJoiner</span><br><span class="line">String arrey1 = &quot;你好&quot;;</span><br><span class="line">String arrey2 = &quot;朋友&quot;;</span><br><span class="line">StringJoiner a = new StringJoiner(&quot;,&quot;);</span><br><span class="line">StringJoiner a = new StringJoiner(&quot;,&quot;, &quot;[&quot;, &quot;]&quot;);</span><br><span class="line">a.add(arrey1);</span><br><span class="line">a.add(arrey2);</span><br><span class="line">sout(a);//你好,朋友</span><br><span class="line">sout(a);//[你好,朋友]</span><br><span class="line"></span><br><span class="line">//ArrayList(集合)(Byte, Short, Character, Integer, Long, Float, Double, Boolean)</span><br><span class="line">ArrayList&lt;String&gt; arrayList = new ArrayList&lt;String&gt;();</span><br><span class="line">arrayList.add(&quot;1&quot;);//添加</span><br><span class="line">arrayList.add(&quot;2&quot;);</span><br><span class="line">arrayList.remove(&quot;2&quot;);//删除</span><br><span class="line">System.out.println(arrayList);//[1]</span><br><span class="line">arrayList.add(&quot;3&quot;);</span><br><span class="line">System.out.println(arrayList.remove(1));//3，删除指定并返回被删除内容</span><br><span class="line">System.out.println(arrayList.set(0, &quot;4&quot;));//1，修改指定返回被修改内容</span><br><span class="line">System.out.println(arrayList.get(0));//4，获取</span><br><span class="line">System.out.println(arrayList.size());//1，长度</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="14-其他知识点（由于吃过亏，因此记录一下）"><a href="#14-其他知识点（由于吃过亏，因此记录一下）" class="headerlink" title="14.  其他知识点（由于吃过亏，因此记录一下）"></a>14.  其他知识点（由于吃过亏，因此记录一下）</h3><p>如何将字符数组，字节数组转化为字符串： String s &#x3D; new String(chs&#x2F;bytes)<br>&#x3D;&#x3D; 比较引用类型比较的是地址<br>static用于class类公用（与对象无关，类名调用）<br>float定义时数值后加F， long定义时数值后加L<br>main函数可以手动调用</p>
-
+        <h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1>
+        
+          <a class="article-more-a" href="/2023/04/26/Java%E5%AD%A6%E4%B9%A0/#more">more >></a>
+        
       
 
       
