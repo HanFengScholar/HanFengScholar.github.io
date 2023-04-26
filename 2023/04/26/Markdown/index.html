@@ -16,7 +16,7 @@
 <meta property="og:description" content="markdown">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-04-25T16:27:28.872Z">
-<meta property="article:modified_time" content="2023-04-26T13:34:12.821Z">
+<meta property="article:modified_time" content="2023-04-26T14:08:22.222Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -237,8 +237,73 @@
 <br>
 
 <h4 id="5-代码块："><a href="#5-代码块：" class="headerlink" title="5. 代码块："></a>5. 代码块：</h4><ul>
-<li>在markdown想要敲代码也是可以的(支持多种语言)  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span><span class="comment">//用```加语言即可输入代码</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world&quot;</span>);<span class="comment">//  ```表示代码块可以指定语言 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">#### <span class="number">6.</span> 链接：  </span><br><span class="line">* 如果想要添加链接可以像这样用[]表示名字（）里输入链接，例如`[CSND](https:<span class="comment">//www.csdn.net/)`，实现结果[CSND](https://www.csdn.net/)  </span></span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">#### <span class="number">7.</span> 引用：</span><br><span class="line">&gt; 那么这个框是怎么实现的呢？---用“&gt;”加空格即可，多个“&gt;”可以进行嵌套</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">#### <span class="number">8.</span> 扩展语法：</span><br><span class="line">* 上标:用^^包围</span><br><span class="line">* 下标:用~~包围</span><br><span class="line">`H~<span class="number">2</span>~O <span class="number">2</span>^<span class="number">20</span>^`:H~<span class="number">2</span>~O <span class="number">2</span>^<span class="number">20</span>^  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">#### <span class="number">9.</span>任务列表：</span><br><span class="line">* 用- [] 来表示任务[]中要添加一个空格  </span><br><span class="line">- [x] 学习Markdown的简单用法</span><br><span class="line">- [x] 使用Markdown写CSDN</span><br><span class="line">- [ ] 学习C语言</span><br><span class="line">- [ ] 完成作业</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">#### <span class="number">10.</span>制作表格：</span><br><span class="line">* 用|制作表格:表示对齐</span><br><span class="line"></span><br><span class="line">|学号|姓名|年龄|</span><br><span class="line">|:---|---:|:---:|</span><br><span class="line">|<span class="number">00001</span>|CSDNlover|未知|</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">#### <span class="number">11.</span>emoji表情：</span><br><span class="line">`:sweat_smile:`::sweat_smile:</span><br><span class="line">==想要更多emoji推荐访问这个网址[emoji](https:<span class="comment">//emojipedia.org/apple/)进行copy==</span></span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">#### <span class="number">12.</span>分割线：</span><br><span class="line">* 用三个*或-或_添加分割线</span><br><span class="line">---</span><br><span class="line">当然这些只是学习了Markdown的基本知识，我认为这些已经足够让我平时记录学习了，毕竟对许多刚开始学习编程的小白来说学Markdown只是一个学习小插曲，不必深入花费太多精力</span><br><span class="line">[^<span class="number">1</span>]:与C语言一样一定要用英文键盘下输入的符号才可以哦！  </span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">## C语言[^<span class="number">2</span>]：</span><br><span class="line">（因为几个月前已经看过一次课，这周根据安排进行重刷，也是自己对知识的巩固以及查缺补漏）</span><br><span class="line">**<span class="number">1.</span> <span class="built_in">printf</span>----print format(格式化 输出)**</span><br><span class="line">**<span class="number">2.</span> \n\后面的\是告诉电脑这里和下一行是一起的**</span><br><span class="line"></span><br><span class="line">&gt;因此<span class="built_in">printf</span>还可以这样写喔</span><br><span class="line">```c  </span><br><span class="line">	print\</span><br><span class="line">f(<span class="string">&quot;CSDN&quot;</span>)</span><br><span class="line">\t tab键</span><br><span class="line">\b 退格键</span><br><span class="line">\a 报警声</span><br><span class="line">\g 省略浮点数小数后的<span class="number">0</span></span><br></pre></td></tr></table></figure>
-<strong>3. 补码：</strong></li>
+<li>在markdown想要敲代码也是可以的(支持多种语言)</li>
+</ul>
+<br>
+
+<h4 id="6-链接："><a href="#6-链接：" class="headerlink" title="6. 链接："></a>6. 链接：</h4><ul>
+<li>如果想要添加链接可以像这样用[]表示名字（）里输入链接，例如<code>[CSND](https://www.csdn.net/)</code>，实现结果<a target="_blank" rel="noopener" href="https://www.csdn.net/">CSND</a></li>
+</ul>
+<br>
+
+<h4 id="7-引用："><a href="#7-引用：" class="headerlink" title="7. 引用："></a>7. 引用：</h4><blockquote>
+<p>那么这个框是怎么实现的呢？—用“&gt;”加空格即可，多个“&gt;”可以进行嵌套</p>
+</blockquote>
+<br>
+
+<h4 id="8-扩展语法："><a href="#8-扩展语法：" class="headerlink" title="8. 扩展语法："></a>8. 扩展语法：</h4><ul>
+<li>上标:用^^包围</li>
+<li>下标:用~~包围<br><code>H~2~O 2^20^</code>:H<del>2</del>O 2^20^</li>
+</ul>
+<br>
+
+<h4 id="9-任务列表："><a href="#9-任务列表：" class="headerlink" title="9.任务列表："></a>9.任务列表：</h4><ul>
+<li>用- [] 来表示任务[]中要添加一个空格</li>
+</ul>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 学习Markdown的简单用法</li>
+<li><input checked="" disabled="" type="checkbox"> 使用Markdown写CSDN</li>
+<li><input disabled="" type="checkbox"> 学习C语言</li>
+<li><input disabled="" type="checkbox"> 完成作业</li>
+</ul>
+<br>
+
+<h4 id="10-制作表格："><a href="#10-制作表格：" class="headerlink" title="10.制作表格："></a>10.制作表格：</h4><ul>
+<li>用|制作表格:表示对齐</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">学号</th>
+<th align="right">姓名</th>
+<th align="center">年龄</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">00001</td>
+<td align="right">CSDNlover</td>
+<td align="center">未知</td>
+</tr>
+</tbody></table>
+<br>
+
+<h4 id="11-emoji表情："><a href="#11-emoji表情：" class="headerlink" title="11.emoji表情："></a>11.emoji表情：</h4><p><code>:sweat_smile:</code>::sweat_smile:<br>&#x3D;&#x3D;想要更多emoji推荐访问这个网址<a target="_blank" rel="noopener" href="https://emojipedia.org/apple/">emoji</a>进行copy&#x3D;&#x3D;</p>
+<br>
+
+<h4 id="12-分割线："><a href="#12-分割线：" class="headerlink" title="12.分割线："></a>12.分割线：</h4><ul>
+<li>用三个*或-或_添加分割线</li>
+</ul>
+<hr>
+<p>当然这些只是学习了Markdown的基本知识，我认为这些已经足够让我平时记录学习了，毕竟对许多刚开始学习编程的小白来说学Markdown只是一个学习小插曲，不必深入花费太多精力<br>[^1]:与C语言一样一定要用英文键盘下输入的符号才可以哦！  </p>
+<br>
+
+<h2 id="C语言-2-："><a href="#C语言-2-：" class="headerlink" title="C语言[^2]："></a>C语言[^2]：</h2><p>（因为几个月前已经看过一次课，这周根据安排进行重刷，也是自己对知识的巩固以及查缺补漏）<br><strong>1. printf—-print format(格式化 输出)</strong><br><strong>2. \n\后面的\是告诉电脑这里和下一行是一起的</strong></p>
+<blockquote>
+<p>因此printf还可以这样写喔</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">	print\</span><br><span class="line">f(<span class="string">&quot;CSDN&quot;</span>)</span><br><span class="line">\t tab键</span><br><span class="line">\b 退格键</span><br><span class="line">\a 报警声</span><br><span class="line">\g 省略浮点数小数后的<span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><strong>3. 补码：</strong></p>
+<ul>
 <li>正数的补码是该数的二进制形式</li>
 <li>复数由正数按位取反然后再加1<br><code>例如00000111-&gt;11111001</code></li>
 </ul>
@@ -409,7 +474,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#markdown"><span class="toc-number">1.</span> <span class="toc-text">markdown</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-23%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">10.23：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%E6%90%9E%E4%BA%86%E4%B8%80%E4%B8%8BMarkdown%E7%9A%84%E4%BD%BF%E7%94%A8-1-%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">今天搞了一下Markdown的使用[^1]：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%8D%A2%E8%A1%8C%EF%BC%9A"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1. 目录与换行：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E2%80%9C-%E2%80%9D%E4%B8%8E%E2%80%9D-%E2%80%9D%EF%BC%9A"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">2. “*”与”_”：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%88%A0%E9%99%A4%E7%BA%BF%E4%B8%8E%E9%AB%98%E4%BA%AE%EF%BC%9A"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">3. 删除线与高亮：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E4%B8%8E%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%9A"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">4. 无序列表与有序列表：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%BB%A3%E7%A0%81%E5%9D%97%EF%BC%9A"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">5. 代码块：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">作业：</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#markdown"><span class="toc-number">1.</span> <span class="toc-text">markdown</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-23%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">10.23：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8A%E5%A4%A9%E6%90%9E%E4%BA%86%E4%B8%80%E4%B8%8BMarkdown%E7%9A%84%E4%BD%BF%E7%94%A8-1-%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">今天搞了一下Markdown的使用[^1]：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%8D%A2%E8%A1%8C%EF%BC%9A"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1. 目录与换行：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E2%80%9C-%E2%80%9D%E4%B8%8E%E2%80%9D-%E2%80%9D%EF%BC%9A"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">2. “*”与”_”：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%88%A0%E9%99%A4%E7%BA%BF%E4%B8%8E%E9%AB%98%E4%BA%AE%EF%BC%9A"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">3. 删除线与高亮：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8%E4%B8%8E%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8%EF%BC%9A"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">4. 无序列表与有序列表：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%BB%A3%E7%A0%81%E5%9D%97%EF%BC%9A"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">5. 代码块：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E9%93%BE%E6%8E%A5%EF%BC%9A"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">6. 链接：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%BC%95%E7%94%A8%EF%BC%9A"><span class="toc-number">1.1.1.7.</span> <span class="toc-text">7. 引用：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95%EF%BC%9A"><span class="toc-number">1.1.1.8.</span> <span class="toc-text">8. 扩展语法：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8%EF%BC%9A"><span class="toc-number">1.1.1.9.</span> <span class="toc-text">9.任务列表：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E5%88%B6%E4%BD%9C%E8%A1%A8%E6%A0%BC%EF%BC%9A"><span class="toc-number">1.1.1.10.</span> <span class="toc-text">10.制作表格：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#11-emoji%E8%A1%A8%E6%83%85%EF%BC%9A"><span class="toc-number">1.1.1.11.</span> <span class="toc-text">11.emoji表情：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#12-%E5%88%86%E5%89%B2%E7%BA%BF%EF%BC%9A"><span class="toc-number">1.1.1.12.</span> <span class="toc-text">12.分割线：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80-2-%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">C语言[^2]：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%EF%BC%9A"><span class="toc-number">1.3.</span> <span class="toc-text">作业：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
