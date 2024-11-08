@@ -16,7 +16,7 @@
 <meta property="og:description" content="CTF">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-11-08T09:20:12.104Z">
-<meta property="article:modified_time" content="2024-11-08T11:03:29.095Z">
+<meta property="article:modified_time" content="2024-11-08T11:26:28.269Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -200,217 +200,282 @@
         <h1 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h1><span id="more"></span>
 
 <h2 id="杂项："><a href="#杂项：" class="headerlink" title="杂项："></a>杂项：</h2><h3 id="1-文件类"><a href="#1-文件类" class="headerlink" title="1. 文件类"></a>1. 文件类</h3><h5 id="分离文件："><a href="#分离文件：" class="headerlink" title="分离文件："></a>分离文件：</h5><ol>
-<li><strong>不知道后缀名，无法打开文件 ：</strong> <br>
- * kali中用file获取文件名
- * winhex通过windows文件头信息判断文件信息
- * notepad++中对照16进制文件头判断
- <br></li>
-<li><strong>文件残缺错误，需要修复：</strong> <br>
- * kali中file获取文件显示data
- * 补充缺失的文件头
- <br></li>
-<li><strong>kali中binwalk工具:</strong> <br>
- * 分析文件：binwalk filename
- * 分离文件：binwalk -e filename(创建文件夹分离，遇到zip帮我们解压)
- <br></li>
-<li><strong>foremost：</strong> <br>
- * 分离文件：foremost filename -o 输出文件夹（不存在则创建）（但不会解压）
- <br></li>
-<li><strong>dd(手动分离)：</strong> <br>
- * 格式：dd if=源文件 of=目标文件名 bs=num1 count=num2 skip=num3
- * 参数：
-     > if: 输入文件名
-       of: 输出文件名
-       bs: 读写块大小为num1（bytes）
-       count: 读num2个num1
-       skip: 从文件开头跳过num3个num1后复制
- <br></li>
-<li><strong>010  Editor:</strong> <br>
- * 选定右键selection -> save selection
- <br></li>
-<li><strong>当拿到一串16进制的txt时可以通过对照前8个数来判断类型（这里给出常见类型）:</strong> <br>
- > JPEG (jpg)，文件头：FFD8FFE0或FFD8FFE1或FFD8FFE8。
-   GIF (gif)，文件头：47494638
-   PNG (png)，文件头：89504E47。
-   TIFF (tif)，文件头：49492A00。      
-   Windows Bitmap (bmp)，文件头：424DC001。        
-   CAD (dwg)，文件头：41433130。       
-   Adobe Photoshop (psd)，文件头：38425053。       
-   Rich Text Format (rtf)，文件头：7B5C727466。        
-   XML (xml)，文件头：3C3F786D6C。     
-   HTML (html)，文件头：68746D6C3E10。     
-   Email [thorough only] (eml)，文件头：44656C69766572792D646174653A  
-   RAR:526172211a0700CF
- 
- <br></li>
+<li><p><strong>不知道后缀名，无法打开文件 ：</strong></p>
+<ul>
+<li>kali中用file获取文件名</li>
+<li>winhex通过windows文件头信息判断文件信息</li>
+<li>notepad++中对照16进制文件头判断</li>
+</ul>
+</li>
+<li><p><strong>文件残缺错误，需要修复：</strong></p>
+<ul>
+<li>kali中file获取文件显示data</li>
+<li>补充缺失的文件头</li>
+</ul>
+</li>
+<li><p><strong>kali中binwalk工具:</strong></p>
+<ul>
+<li>分析文件：binwalk filename</li>
+<li>分离文件：binwalk -e filename(创建文件夹分离，遇到zip帮我们解压)</li>
+</ul>
+</li>
+<li><p><strong>foremost：</strong></p>
+<ul>
+<li>分离文件：foremost filename -o 输出文件夹（不存在则创建）（但不会解压）</li>
+</ul>
+</li>
+<li><p><strong>dd(手动分离)：</strong></p>
+<ul>
+<li>格式：dd if&#x3D;源文件 of&#x3D;目标文件名 bs&#x3D;num1 count&#x3D;num2 skip&#x3D;num3</li>
+<li>参数：<blockquote>
+<p>if: 输入文件名<br>    of: 输出文件名<br>    bs: 读写块大小为num1（bytes）<br>    count: 读num2个num1<br>    skip: 从文件开头跳过num3个num1后复制</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>010  Editor:</strong></p>
+<ul>
+<li>选定右键selection -&gt; save selection</li>
+</ul>
+</li>
+<li><p><strong>当拿到一串16进制的txt时可以通过对照前8个数来判断类型（这里给出常见类型）:</strong></p>
+<blockquote>
+<p>JPEG (jpg)，文件头：FFD8FFE0或FFD8FFE1或FFD8FFE8。<br>   GIF (gif)，文件头：47494638<br>   PNG (png)，文件头：89504E47。<br>   TIFF (tif)，文件头：49492A00。<br>   Windows Bitmap (bmp)，文件头：424DC001。<br>   CAD (dwg)，文件头：41433130。<br>   Adobe Photoshop (psd)，文件头：38425053。<br>   Rich Text Format (rtf)，文件头：7B5C727466。<br>   XML (xml)，文件头：3C3F786D6C。<br>   HTML (html)，文件头：68746D6C3E10。<br>   Email [thorough only] (eml)，文件头：44656C69766572792D646174653A<br>   RAR:526172211a0700CF</p>
+</blockquote>
+</li>
 </ol>
 <h5 id="合并文件："><a href="#合并文件：" class="headerlink" title="合并文件："></a>合并文件：</h5><ol>
-<li><strong>Linux：</strong> <br>
- * cat text1 text2 text3 > newtext(合并)[^RUNOOB]
- * md5sum newtext(检查完整性)  
- <br></li>
-<li><strong>windows:</strong> <br>
- * copy /B  text1+text2+text3 newtext(合并)
- * certutil -hashfile newtext(检查完整性) 
- <br></li>
+<li><p><strong>Linux：</strong></p>
+<ul>
+<li>cat text1 text2 text3 &gt; newtext(合并)[^RUNOOB]</li>
+<li>md5sum newtext(检查完整性)</li>
+</ul>
+</li>
+<li><p><strong>windows:</strong></p>
+<ul>
+<li>copy &#x2F;B  text1+text2+text3 newtext(合并)</li>
+<li>certutil -hashfile newtext(检查完整性)</li>
+</ul>
+</li>
 </ol>
 <h5 id="查找答案题："><a href="#查找答案题：" class="headerlink" title="查找答案题："></a>查找答案题：</h5><ol>
-<li><strong>notepad查找flag：</strong><ul>
+<li><p><strong>notepad查找flag：</strong></p>
+<ul>
 <li>打开notepad</li>
 <li>Ctrl+F</li>
 <li>搜索flag or key</li>
 </ul>
 </li>
-<li><strong>010 Editor查找：</strong><ul>
+<li><p><strong>010 Editor查找：</strong></p>
+<ul>
 <li>Search</li>
 <li>replace</li>
 <li>最下方Hex Bytes</li>
 </ul>
 </li>
 </ol>
-<hr>
 <h3 id="2-图片隐写类"><a href="#2-图片隐写类" class="headerlink" title="2. 图片隐写类"></a>2. 图片隐写类</h3><ul>
-<li><strong>zsteg:(检测LSB)</strong><ul>
+<li><p><strong>zsteg:(检测LSB)</strong></p>
+<ul>
 <li>kali里面 gem install zsteg</li>
 <li>zsteg xxx.png</li>
-<li>检测出有png图片zsteg -e b1,rgb,lsb,xy filename &gt; outfilename  <br></li>
+<li>检测出有png图片zsteg -e b1,rgb,lsb,xy filename &gt; outfilename</li>
 </ul>
 </li>
-<li><strong>exif(属性):</strong><ul>
-<li>kali里面exiftool xxx  <br></li>
+<li><p><strong>exif(属性):</strong></p>
+<ul>
+<li>kali里面exiftool xxx</li>
 </ul>
 </li>
-<li><strong>stegsolve （图片隐写分析工具）</strong><ul>
+<li><p><strong>stegsolve （图片隐写分析工具）</strong></p>
+<ul>
 <li>File Format 文件信息</li>
 <li>Data Extract 数据提取 LSB类题</li>
 <li>Stereogram Solver 图片偏移</li>
 <li>Frame Browser 动图逐帧查看</li>
-<li>Image Combiner 多图拼接  <br></li>
+<li>Image Combiner 多图拼接</li>
 </ul>
 </li>
-<li><strong>QR_Research（二维码工具）</strong><ul>
-<li>查找二维码信息的工具，选取工具中截图查看二维码  <br></li>
+<li><p><strong>QR_Research（二维码工具）</strong></p>
+<ul>
+<li>查找二维码信息的工具，选取工具中截图查看二维码</li>
 </ul>
 </li>
-<li><strong>TweakPNG</strong><ul>
+<li><p><strong>TweakPNG</strong></p>
+<ul>
 <li><p>TweakPNG是一款简单易用的PNG图像浏览工具，它允许查看和修改一些PNG图像文件的元信息存储。使用场景:文件头正常却无法打开文件，利用TweakPNG修改CRC</p>
 </li>
 <li><p>例:<br>  1.当PNG文件头正常但无法打开文件，可能是CRC校验出错，可以尝试通过TweakPNG打开PNG，会弹出校验错误的提示，这里显示CRC是fe1a5ab6，正确的是b0a7a9f1。打开winhex搜索fe1a5ab6将其改为b0a7a9f1。</p>
 </li>
 <li><p>文件头正常却无法打开文件，利用TweakPNG 修改CRC….<br>  2.有时CRC没有错误，但是图片的高度或者宽度发生了错误，需要通过CRC计算出正确的高度或者宽度。可以用下面的py脚本，需要改文件位置和TweakPNG得到的CRC实际值，用计算出高度，利用01Editor修改宽高</p>
-  <br></li>
+</li>
 </ul>
 </li>
-<li><strong>Stegdetect工具探测加密方式</strong><ul>
+<li><p><strong>Stegdetect工具探测加密方式</strong></p>
+<ul>
 <li>Stegdetect.程序主要用于分析PEG文件。因此用stegdetect 可以检测到通过Steg、JPHide. OutGuess、Invisible Secrets、F5、appendX和Camouflage等这些隐写工具隐藏的信息。</li>
 <li>stegdetect xxx.jpg</li>
-<li>stegdetect -s 10.0 xxx.jpg  <br></li>
+<li>stegdetect -s 10.0 xxx.jpg</li>
 </ul>
 </li>
-<li><strong>bftools</strong><ul>
+<li><p><strong>bftools</strong></p>
+<ul>
 <li>用于解密图片信息。</li>
 <li>使用场景:在windows的cmd下，对加密过的图片文件进行解密格式:</li>
 <li>Bftools .exe decode braincopter要解密的图片名称-output输出文件名</li>
-<li>Bftools.exe run.上一步输出的文件  <br></li>
+<li>Bftools.exe run.上一步输出的文件</li>
 </ul>
 </li>
-<li><strong>SilentEye</strong><ul>
+<li><p><strong>SilentEye</strong></p>
+<ul>
 <li>silenteye是一款可以将文字或者文件隐藏到图片的解密工具。</li>
 <li>使用场景: windows下打开silentEye工具，对加密的图片进行解密</li>
 <li>1.使用silentEye程序打开目标图片，点击image一&gt;decode，点击decode，可以查看隐藏文件，点击保存即可</li>
-<li>2.如果需要密码，勾选encrypteddata，输入密码和确认密码，点击decode再解密  <br></li>
+<li>2.如果需要密码，勾选encrypteddata，输入密码和确认密码，点击decode再解密</li>
 </ul>
 </li>
-<li><strong>Outguess</strong><ul>
+<li><p><strong>Outguess</strong></p>
+<ul>
 <li>outguess 一般用于解密文件信息。(kali)</li>
 <li>使用场景:Stegdetect识别出来或者题目提示是outguess加密的图片该工具需编译使用: .&#x2F;configure &amp;&amp; make &amp;&amp; make install</li>
-<li>格式: outguess -r 要解密的文件名输出结果文件名  <br></li>
+<li>格式: outguess -r 要解密的文件名输出结果文件名</li>
 </ul>
 </li>
-<li><strong>Jphide</strong><ul>
+<li><p><strong>Jphide</strong></p>
+<ul>
 <li>Jphide是基于最低有效位LSB的JPEG格式图像隐写算法.例:</li>
-<li>Stegdetect提示jphide加密时，可以用Jphs.工具进行解密，打开jphswin.exe， 使用open jpeg打开图片，点击seek，输入密码和确认密码，在弹出文件框中选择要保存的解密文件位置即可，结果保存成txt文件。  <br></li>
+<li>Stegdetect提示jphide加密时，可以用Jphs.工具进行解密，打开jphswin.exe， 使用open jpeg打开图片，点击seek，输入密码和确认密码，在弹出文件框中选择要保存的解密文件位置即可，结果保存成txt文件。</li>
 </ul>
 </li>
-<li><strong>F5</strong><ul>
+<li><p><strong>F5</strong></p>
+<ul>
 <li>F5一般用于解密文件信息。</li>
 <li>使用场景: Stegdetect识 别出来是F5加密的图片或题目提示是F5加密的图片</li>
 <li>进入F5-steganography_F5目录，将图片文件拷贝至该目录下，从CMD进入该目录</li>
-<li>格式: Java Exrtact 要解密的文件名 -p 密码<br></li>
+<li>格式: Java Exrtact 要解密的文件名 -p 密码</li>
 </ul>
 </li>
 </ul>
 <h3 id="3-压缩包文件"><a href="#3-压缩包文件" class="headerlink" title="3. 压缩包文件"></a>3. 压缩包文件</h3><ul>
-<li><strong>伪加密：</strong><ul>
+<li><p><strong>伪加密：</strong></p>
+<ul>
 <li>zip: winhex打开查找50（1） 4B（2） 01（3） 02（4）往后数把9，10改成00 00即可</li>
-<li>rar: winhex打开查找第24个数尾为0即伪加密，改成00，尾为4为加密  <br></li>
+<li>rar: winhex打开查找第24个数尾为0即伪加密，改成00，尾为4为加密</li>
 </ul>
 </li>
-<li><strong>ZipCenOp.jar(验证是否为伪加密工具)</strong><ul>
-<li>java -jar ZipCenOp.jar -r file.zip  <br></li>
+<li><p><strong>ZipCenOp.jar(验证是否为伪加密工具)</strong></p>
+<ul>
+<li>java -jar ZipCenOp.jar -r file.zip</li>
 </ul>
 </li>
-<li><strong>rar加密爆破解密：</strong><ul>
+<li><p><strong>rar加密爆破解密：</strong></p>
+<ul>
 <li>1.获取rar压缩包密码hash文件：rar2john file.name &gt; hash</li>
-<li>2.john hash  <br></li>
+<li>2.john hash</li>
 </ul>
 </li>
-<li><strong>ARCHPR(rar密码破解工具)</strong>  <br></li>
-<li><strong>Ziperello(zip密码破解工具)</strong><ul>
-<li>使用方式与上面的软件类似，不过这个速度更快，接近准工业级的破解速度了，非常惊人。<br></li>
+<li><p><strong>ARCHPR(rar密码破解工具)</strong></p>
+</li>
+<li><p><strong>Ziperello(zip密码破解工具)</strong></p>
+<ul>
+<li>使用方式与上面的软件类似，不过这个速度更快，接近准工业级的破解速度了，非常惊人。</li>
 </ul>
 </li>
 </ul>
 <h3 id="4-流量分析"><a href="#4-流量分析" class="headerlink" title="4. 流量分析"></a>4. 流量分析</h3><ul>
-<li><strong>WireShark工具的基本使用</strong><ul>
-<li>wireshark的过滤器和过滤规则能够帮助我们迅速定位到要分析的报文。</li>
-<li>常用的过滤命令:</li>
-<li>1.过滤IP，如源IP或者目标x.x.x.x</li>
-<li>ip.src eq x.x.x.x or ip.dst eq x.x.x.x 或者ip.addr eq x.x.x.x  <br></li>
-<li>2.过滤端口</li>
-<li>tcp.port eq 80 or udp.port eq 80</li>
-<li>tcp. dstport &#x3D;&#x3D; 80 只显tcp协议的目标端口为80</li>
-<li>tcp. srcport &#x3D;&#x3D; 80 只显tcp协议的源端口为80</li>
-<li>tcp.port &gt;&#x3D; 1 and tcp.port &lt;&#x3D; 80  <br></li>
-<li>3.过滤协议</li>
-<li>tcp&#x2F;udp&#x2F; arp&#x2F; icmp&#x2F;http&#x2F; ftp&#x2F;dns&#x2F;ip  <br></li>
-<li>4.过滤MAC</li>
-<li>eth.dst &#x3D;&#x3D; A0:00:00:04:C5:84过滤目标mac  <br></li>
-<li>5.包长度过滤</li>
-<li>udp. length &#x3D; &#x3D;&#x3D; 26这个长度是指udp本身固定长度8加上udp下面那块数据包之和。tcp.len&gt;&#x3D; 7指的是ip数据包(tcp下面那块数据)，不包括tcp本身</li>
-<li>ip.len &#x3D;&#x3D; 94 除了以太网头固定长度14，其它都算是ip.len，即从ip本身到最后</li>
-<li>frame.len &#x3D;&#x3D; 119整个数据包长度，从eth开始到最后  <br></li>
-<li>6.http模式过滤</li>
-<li>http.request.method &#x3D;&#x3D; “GET”</li>
-<li>http.request.method &#x3D;&#x3D; “POST”</li>
-<li>http.request.uri &#x3D;&#x3D; “&#x2F;img&#x2F;logo-edu.gif”</li>
-<li>http contains “GET”</li>
-<li>http contains “HTTP&#x2F;1.”</li>
-<li>http.request.method &#x3D;&#x3D; “GET” &amp;&amp; http contains “User-Agent:”</li>
-<li>http contains “flag”</li>
-<li>http contains “key”</li>
-<li>tcp contains “flag”  <br></li>
-<li>7.WireShark 协议分析</li>
-<li>根据数据包特征进行筛选</li>
-<li>比如查看数据包的时候，有的数据包有某种特征，比如有http(80)。就可以筛选出这种特征出来。</li>
-<li>右键→作为过滤器应用→选中  <br></li>
-<li>8.WireShark流汇聚</li>
-<li>在关注的ttp数据包或tcp数据包中选择流汇聚，可以将HTTP流或TCP流汇 聚或还原成数据，在弹出的框中可以看到数据内容。  <br></li>
-<li>9.常见的HTTP流关键内容:</li>
-<li>1、HTML中直接包含重要信息。</li>
-<li>2、上传或下载文件内容，通常包含文件名、hash值等关键信息，常用POST请求上传。</li>
-<li>3、一句话木马，POST请求，内容包含eval，内容使用base64加密  <br></li>
-<li>10.WireShark数据提取</li>
-<li>1.使用wireshark可以自动提取通过htp传输的文件内容。  <br></li>
-<li>11.wireshark可以手动提取文件内容。</li>
-<li>点击想要的数据包，如下图选定media type的位置</li>
-<li>右键→导出分组字节流或者点击菜单栏文件→导出分组字节流，快捷方式Ctrl+H在弹出的框中将文件保存成二进制文件。</li>
+<li><p><strong>WireShark工具的基本使用</strong></p>
+<ul>
+<li><p>wireshark的过滤器和过滤规则能够帮助我们迅速定位到要分析的报文。</p>
+</li>
+<li><p>常用的过滤命令:</p>
+</li>
+<li><p>1.过滤IP，如源IP或者目标x.x.x.x</p>
+</li>
+<li><p>ip.src eq x.x.x.x or ip.dst eq x.x.x.x 或者ip.addr eq x.x.x.x</p>
+</li>
+<li><p>2.过滤端口</p>
+</li>
+<li><p>tcp.port eq 80 or udp.port eq 80</p>
+</li>
+<li><p>tcp. dstport &#x3D;&#x3D; 80 只显tcp协议的目标端口为80</p>
+</li>
+<li><p>tcp. srcport &#x3D;&#x3D; 80 只显tcp协议的源端口为80</p>
+</li>
+<li><p>tcp.port &gt;&#x3D; 1 and tcp.port &lt;&#x3D; 80</p>
+</li>
+<li><p>3.过滤协议</p>
+</li>
+<li><p>tcp&#x2F;udp&#x2F; arp&#x2F; icmp&#x2F;http&#x2F; ftp&#x2F;dns&#x2F;ip</p>
+</li>
+<li><p>4.过滤MAC</p>
+</li>
+<li><p>eth.dst &#x3D;&#x3D; A0:00:00:04:C5:84过滤目标mac</p>
+</li>
+<li><p>5.包长度过滤</p>
+</li>
+<li><p>udp. length &#x3D; &#x3D;&#x3D; 26这个长度是指udp本身固定长度8加上udp下面那块数据包之和。tcp.len&gt;&#x3D; 7指的是ip数据包(tcp下面那块数据)，不包括tcp本身</p>
+</li>
+<li><p>ip.len &#x3D;&#x3D; 94 除了以太网头固定长度14，其它都算是ip.len，即从ip本身到最后</p>
+</li>
+<li><p>frame.len &#x3D;&#x3D; 119整个数据包长度，从eth开始到最后</p>
+</li>
+<li><p>6.http模式过滤</p>
+</li>
+<li><p>http.request.method &#x3D;&#x3D; “GET”</p>
+</li>
+<li><p>http.request.method &#x3D;&#x3D; “POST”</p>
+</li>
+<li><p>http.request.uri &#x3D;&#x3D; “&#x2F;img&#x2F;logo-edu.gif”</p>
+</li>
+<li><p>http contains “GET”</p>
+</li>
+<li><p>http contains “HTTP&#x2F;1.”</p>
+</li>
+<li><p>http.request.method &#x3D;&#x3D; “GET” &amp;&amp; http contains “User-Agent:”</p>
+</li>
+<li><p>http contains “flag”</p>
+</li>
+<li><p>http contains “key”</p>
+</li>
+<li><p>tcp contains “flag”</p>
+</li>
+<li><p>7.WireShark 协议分析</p>
+</li>
+<li><p>根据数据包特征进行筛选</p>
+</li>
+<li><p>比如查看数据包的时候，有的数据包有某种特征，比如有http(80)。就可以筛选出这种特征出来。</p>
+</li>
+<li><p>右键→作为过滤器应用→选中</p>
+</li>
+<li><p>8.WireShark流汇聚</p>
+</li>
+<li><p>在关注的ttp数据包或tcp数据包中选择流汇聚，可以将HTTP流或TCP流汇 聚或还原成数据，在弹出的框中可以看到数据内容。</p>
+</li>
+<li><p>9.常见的HTTP流关键内容:</p>
+</li>
+<li><p>1、HTML中直接包含重要信息。</p>
+</li>
+<li><p>2、上传或下载文件内容，通常包含文件名、hash值等关键信息，常用POST请求上传。</p>
+</li>
+<li><p>3、一句话木马，POST请求，内容包含eval，内容使用base64加密</p>
+</li>
+<li><p>10.WireShark数据提取</p>
+</li>
+<li><p>1.使用wireshark可以自动提取通过htp传输的文件内容。</p>
+</li>
+<li><p>11.wireshark可以手动提取文件内容。</p>
+</li>
+<li><p>点击想要的数据包，如下图选定media type的位置</p>
+</li>
+<li><p>右键→导出分组字节流或者点击菜单栏文件→导出分组字节流，快捷方式Ctrl+H在弹出的框中将文件保存成二进制文件。</p>
+</li>
 </ul>
 </li>
 </ul>
 <p>[^RUNOOB]: cat 文件名（查看文件内容）</p>
 <h2 id="逆向："><a href="#逆向：" class="headerlink" title="逆向："></a>逆向：</h2><h3 id="IDA-使用"><a href="#IDA-使用" class="headerlink" title="IDA 使用"></a>IDA 使用</h3><ol>
-<li>常用快捷键.<ul>
+<li><p>常用快捷键.</p>
+<ul>
 <li><strong>f5:</strong> 一键反汇编</li>
 <li><strong>a:</strong> 将数据转换为字符串</li>
 <li><strong>esc:</strong> 回退键，能够倒回上一部操作的视图(只有在反汇编窗口才是这个作用，如果是在其他窗口按下esc,会关闭该窗口)</li>
@@ -433,11 +498,11 @@
 </li>
 </ol>
 <ul>
-<li><strong>ExeinfoPe （判断软件版本和是否有壳）</strong><blockquote>
-<p>1、32位还是64位软件<br>2、是否有壳。</p>
-</blockquote>
-</li>
+<li><strong>ExeinfoPe （判断软件版本和是否有壳）</strong></li>
 </ul>
+<blockquote>
+<p>1、32位还是64位软件<br>  2、是否有壳。</p>
+</blockquote>
 
       
 
