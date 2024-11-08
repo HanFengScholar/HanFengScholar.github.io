@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>初窥Java | 韩枫的博客</title>
+  <title>CTF基础（非常非常基础） | 韩枫的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java学习">
+  <meta name="description" content="CTF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初窥Java">
-<meta property="og:url" content="http://example.com/2023/04/26/Java%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:title" content="CTF基础（非常非常基础）">
+<meta property="og:url" content="http://example.com/2024/11/08/CTF/index.html">
 <meta property="og:site_name" content="韩枫的博客">
-<meta property="og:description" content="Java学习">
+<meta property="og:description" content="CTF">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-04-25T16:27:28.864Z">
-<meta property="article:modified_time" content="2023-04-25T17:30:37.381Z">
+<meta property="article:published_time" content="2024-11-08T09:20:12.104Z">
+<meta property="article:modified_time" content="2024-11-08T11:03:29.095Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -167,14 +167,14 @@
           </div>
           <div id="js-content" class="content-ll">
             
-<article id="post-Java学习" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-CTF" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      初窥Java
+      CTF基础（非常非常基础）
     </h1>
   
 
@@ -189,112 +189,255 @@
         </a>
         
         
-        <a href="/2023/04/26/Java%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2023-04-25T16:27:28.864Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-04-26</time>
+        <a href="/2024/11/08/CTF/" class="archive-article-date">
+  	<time datetime="2024-11-08T09:20:12.104Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><span id="more"></span>
+        <h1 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h1><span id="more"></span>
 
-<h2 id="2023年2月17日-4月2日："><a href="#2023年2月17日-4月2日：" class="headerlink" title="2023年2月17日-4月2日："></a>2023年2月17日-4月2日：</h2><h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>花了俩个月深入学习了Java， 有C语言基础的我感觉Java上手很快，话不多说，直接上总结</p>
-<h3 id="2-Java开发工具"><a href="#2-Java开发工具" class="headerlink" title="2. Java开发工具"></a>2. Java开发工具</h3><p><strong>javac</strong>： java编辑器<br><strong>java</strong>： java解释器<br><strong>jdb</strong>： java调试器<br><strong>javap</strong>： 主要用于反编译<br><strong>javadoc</strong>：文档生成器  </p>
-<h3 id="3-cmd命令"><a href="#3-cmd命令" class="headerlink" title="3. cmd命令"></a>3. cmd命令</h3><ul>
-<li><strong>E:</strong> ：切换盘符</li>
-<li><strong>dir</strong> ：显示文件</li>
-<li><strong>cd</strong> ：进入</li>
-<li><strong>cd..</strong> ：后退</li>
-<li><strong>cd\目录\目录</strong>： 多层进入</li>
-<li><strong>cls</strong> ： 清空界面</li>
-<li><strong>exit</strong> ：退出</li>
-</ul>
-<h3 id="4-java工具Notepad"><a href="#4-java工具Notepad" class="headerlink" title="4. java工具Notepad"></a>4. java工具Notepad</h3><p>配置notepad：设置—首选项—新建—window，java，ANSI</p>
-<h3 id="5-变量命名默认规则"><a href="#5-变量命名默认规则" class="headerlink" title="5. 变量命名默认规则"></a>5. 变量命名默认规则</h3><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="center">命名</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">接口和类名</td>
-<td align="center">首字母大写</td>
-</tr>
-<tr>
-<td align="center">方法名和变量名</td>
-<td align="center">首个字母小写，其余大写</td>
-</tr>
-<tr>
-<td align="center">常量名</td>
-<td align="center">全大写</td>
-</tr>
-<tr>
-<td align="center">包</td>
-<td align="center">小写</td>
-</tr>
-</tbody></table>
-<h3 id="6-导包类（这里Scanner为例子）"><a href="#6-导包类（这里Scanner为例子）" class="headerlink" title="6. 导包类（这里Scanner为例子）"></a>6. 导包类（这里Scanner为例子）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line">Scanner 名 = new Scanner(System.in);</span><br><span class="line">int 变量 = 名.nextInt();  </span><br></pre></td></tr></table></figure>
-<h3 id="7-语法（与C类似，-由于是给自己看的，-只写不一样的）"><a href="#7-语法（与C类似，-由于是给自己看的，-只写不一样的）" class="headerlink" title="7. 语法（与C类似， 由于是给自己看的， 只写不一样的）"></a>7. 语法（与C类似， 由于是给自己看的， 只写不一样的）</h3><ul>
-<li>swich可以简化： case -&gt; {}</li>
-<li>数组定义 ： int[] arrey &#x3D; new int[]{}; or int arrey[] &#x3D; {};</li>
-<li>private: 只能在本类中访问（可以用this区别全局变量和局部变量）</li>
-</ul>
-<h3 id="8-构造器"><a href="#8-构造器" class="headerlink" title="8. 构造器"></a>8. 构造器</h3><p>构造方法：与类名相同，无返回值连void都没有，需要写无参构造和有参构造，系统默认有一个无参构造<br>构造代码块先于构造方法执行<br>静态代码块static{}随着类的加载而加载，只出现一次，一般用于数据初始化</p>
-<h3 id="9-继承"><a href="#9-继承" class="headerlink" title="9. 继承"></a>9. 继承</h3><p>java只能单继承不能多继承，但支持多层继承<br>object是祖宗类<br>this(本类)<br>super(父类)<br>重写（Override）和重载(overload)： 俩者参数列表区别<br>public&gt;protected&gt;(default)&gt;private</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class zi extends fu&#123;</span><br><span class="line">    //zi类选择重写fu类方法(抽象类必须重写)</span><br><span class="line">    //构造方法先fu后zi, super只能有一个且必须是第一个</span><br><span class="line">    //final变量为常量类不能被继承，方法不能被覆盖</span><br><span class="line">    //抽象类不能new,抽象方法所在的类必是抽象类</span><br><span class="line">    //必须用一个子类继承抽象父类</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="10-接口-interface"><a href="#10-接口-interface" class="headerlink" title="10. 接口(interface)"></a>10. 接口(interface)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//实现接口</span><br><span class="line">class GameJFrame extends JFrame implements KeyListener, ActionListener&#123;&#125;</span><br><span class="line">public interface A &#123;</span><br><span class="line">    //接口默认方法</span><br><span class="line">    public default void method() &#123;</span><br><span class="line">        System.out.println(&quot;A&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //抽象方法</span><br><span class="line">    public void actionPerformed(ActionEvent e);</span><br><span class="line">    //静态方法（只能通过接口名调用）</span><br><span class="line">    public static void show()&#123;</span><br><span class="line">        System.out.println(&quot;static&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    //私有方法</span><br><span class="line">    private (static) void method2()&#123;</span><br><span class="line">        //重复代码块</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">接口无静态代码块和构造方法</span><br><span class="line">一个类可以有多个接口，重名必须重写，调用接口.super.方法</span><br><span class="line">父类与接口方法冲突，优先父类</span><br></pre></td></tr></table></figure>
-<h3 id="11-多态"><a href="#11-多态" class="headerlink" title="11. 多态"></a>11. 多态</h3><p>多态成员方法：编译看左边，运行看右边<br>多态成员变量：编译看左边，运行看左边</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Animal a = new Dog();</span><br><span class="line">if(a instanceof Dog)&#123;&#125;//比较类型(bool类型)</span><br><span class="line">if(a instanceof Dog d)&#123;&#125;//比较类型true则强转为d</span><br></pre></td></tr></table></figure>
-<h3 id="12-内部类"><a href="#12-内部类" class="headerlink" title="12. 内部类"></a>12. 内部类</h3><ul>
-<li>内部类<ol>
-<li>成员内部类</li>
-<li>静态内部类</li>
-<li>局部内部类</li>
-<li>匿名内部类<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Outer.Inner oi = new Outer().new Inner();</span><br><span class="line">//外部成员与内部成员重名</span><br><span class="line">Outer.this.变量</span><br></pre></td></tr></table></figure></li>
+<h2 id="杂项："><a href="#杂项：" class="headerlink" title="杂项："></a>杂项：</h2><h3 id="1-文件类"><a href="#1-文件类" class="headerlink" title="1. 文件类"></a>1. 文件类</h3><h5 id="分离文件："><a href="#分离文件：" class="headerlink" title="分离文件："></a>分离文件：</h5><ol>
+<li><strong>不知道后缀名，无法打开文件 ：</strong> <br>
+ * kali中用file获取文件名
+ * winhex通过windows文件头信息判断文件信息
+ * notepad++中对照16进制文件头判断
+ <br></li>
+<li><strong>文件残缺错误，需要修复：</strong> <br>
+ * kali中file获取文件显示data
+ * 补充缺失的文件头
+ <br></li>
+<li><strong>kali中binwalk工具:</strong> <br>
+ * 分析文件：binwalk filename
+ * 分离文件：binwalk -e filename(创建文件夹分离，遇到zip帮我们解压)
+ <br></li>
+<li><strong>foremost：</strong> <br>
+ * 分离文件：foremost filename -o 输出文件夹（不存在则创建）（但不会解压）
+ <br></li>
+<li><strong>dd(手动分离)：</strong> <br>
+ * 格式：dd if=源文件 of=目标文件名 bs=num1 count=num2 skip=num3
+ * 参数：
+     > if: 输入文件名
+       of: 输出文件名
+       bs: 读写块大小为num1（bytes）
+       count: 读num2个num1
+       skip: 从文件开头跳过num3个num1后复制
+ <br></li>
+<li><strong>010  Editor:</strong> <br>
+ * 选定右键selection -> save selection
+ <br></li>
+<li><strong>当拿到一串16进制的txt时可以通过对照前8个数来判断类型（这里给出常见类型）:</strong> <br>
+ > JPEG (jpg)，文件头：FFD8FFE0或FFD8FFE1或FFD8FFE8。
+   GIF (gif)，文件头：47494638
+   PNG (png)，文件头：89504E47。
+   TIFF (tif)，文件头：49492A00。      
+   Windows Bitmap (bmp)，文件头：424DC001。        
+   CAD (dwg)，文件头：41433130。       
+   Adobe Photoshop (psd)，文件头：38425053。       
+   Rich Text Format (rtf)，文件头：7B5C727466。        
+   XML (xml)，文件头：3C3F786D6C。     
+   HTML (html)，文件头：68746D6C3E10。     
+   Email [thorough only] (eml)，文件头：44656C69766572792D646174653A  
+   RAR:526172211a0700CF
+ 
+ <br></li>
 </ol>
-</li>
-</ul>
-<h3 id="13-异常"><a href="#13-异常" class="headerlink" title="13. 异常"></a>13. 异常</h3><h5 id="Exception分为："><a href="#Exception分为：" class="headerlink" title="Exception分为："></a>Exception分为：</h5><ul>
-<li>运行时异常（RuntimeException）</li>
-<li>编译时异常</li>
-</ul>
-<h5 id="异常的作用："><a href="#异常的作用：" class="headerlink" title="异常的作用："></a>异常的作用：</h5><ul>
-<li>查询bug的关键参考信息 </li>
-<li>作为一种特殊返回值，以便通知调用者底层的执行情况</li>
-</ul>
-<h5 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h5><ul>
-<li>JVM默认处理<ul>
-<li>把异常的名称，原因，错误位置输出在控制台上</li>
-<li>后序代码停止执行</li>
-</ul>
-</li>
-<li>自己处理（捕获异常）  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//可能出现异常的代码;</span></span><br><span class="line">    <span class="comment">//系统自动创建错误对象，然后拿到catch中对比</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类名 变量名)&#123;</span><br><span class="line">    <span class="comment">//异常处理的代码;</span></span><br><span class="line">    <span class="comment">//如果能接收及被捕获，则执行对应catch代码）</span></span><br><span class="line">    <span class="comment">//Throwtable的成员方法</span></span><br><span class="line">        <span class="comment">//public String getMessage(): 返回详细信息</span></span><br><span class="line">        <span class="comment">//public String toString(): 返回此可抛出的简短描述</span></span><br><span class="line">        <span class="comment">//public void printStackTrace():利用System.err.println打印红色</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    <span class="comment">//无论是否出现异常，该代码块中代码都会执行</span></span><br><span class="line">    sout(balabala);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可以让程序继续往下执行，不会停止</span></span><br></pre></td></tr></table></figure>
-<ol>
-<li>如果try中没有遇到问题则正常执行</li>
-<li>如果try中多个问题则多个catch（父类异常写下面）否则默认JVM</li>
-<li>try中遇到问题try中后面的代码不运行</li>
+<h5 id="合并文件："><a href="#合并文件：" class="headerlink" title="合并文件："></a>合并文件：</h5><ol>
+<li><strong>Linux：</strong> <br>
+ * cat text1 text2 text3 > newtext(合并)[^RUNOOB]
+ * md5sum newtext(检查完整性)  
+ <br></li>
+<li><strong>windows:</strong> <br>
+ * copy /B  text1+text2+text3 newtext(合并)
+ * certutil -hashfile newtext(检查完整性) 
+ <br></li>
 </ol>
-</li>
-<li>抛出处理<ul>
-<li>throws：方法开始时告诉使用者可能会出的异常(RuntimeException可不写)</li>
-<li>throw：方法中抛出异常（创建对象）</li>
+<h5 id="查找答案题："><a href="#查找答案题：" class="headerlink" title="查找答案题："></a>查找答案题：</h5><ol>
+<li><strong>notepad查找flag：</strong><ul>
+<li>打开notepad</li>
+<li>Ctrl+F</li>
+<li>搜索flag or key</li>
 </ul>
 </li>
+<li><strong>010 Editor查找：</strong><ul>
+<li>Search</li>
+<li>replace</li>
+<li>最下方Hex Bytes</li>
 </ul>
-<h5 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h5><ul>
-<li>定义类</li>
-<li>写继承关系</li>
-<li>空参构造</li>
-<li>带参构造</li>
+</li>
+</ol>
+<hr>
+<h3 id="2-图片隐写类"><a href="#2-图片隐写类" class="headerlink" title="2. 图片隐写类"></a>2. 图片隐写类</h3><ul>
+<li><strong>zsteg:(检测LSB)</strong><ul>
+<li>kali里面 gem install zsteg</li>
+<li>zsteg xxx.png</li>
+<li>检测出有png图片zsteg -e b1,rgb,lsb,xy filename &gt; outfilename  <br></li>
 </ul>
-<h3 id="14-函数环节"><a href="#14-函数环节" class="headerlink" title="14. 函数环节"></a>14. 函数环节</h3><ul>
-<li>数组求长度： arrey.length;</li>
-<li>Math类(API文档)</li>
-<li>nextLine();单独讲一下， next()遇到空格就不会读取字符串了，但nextLine()只找回车<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//返回类型 用法</span><br><span class="line">boolean a.equals(b)//比较字符串内容</span><br><span class="line">boolean a.equalsIgnoreCase(b);//忽略大小写比较</span><br><span class="line">char chaAt(int index);//根据索引返回字符</span><br><span class="line">int length();//返回长度</span><br><span class="line">String substring(int beginIndex, int endIndex);//截取（包头不包尾）</span><br><span class="line">String substring(int beginInde);//截取到末尾</span><br><span class="line">String replace(新， 旧);//替换</span><br><span class="line"></span><br><span class="line">//StringBuilder</span><br><span class="line">StringBuilder sb = new StringBuilder();</span><br><span class="line">sb.append(任意类型);//添加</span><br><span class="line">sb.reverse();//反转内容</span><br><span class="line">String toString();//转化为String</span><br><span class="line"></span><br><span class="line">//StringJoiner</span><br><span class="line">String arrey1 = &quot;你好&quot;;</span><br><span class="line">String arrey2 = &quot;朋友&quot;;</span><br><span class="line">StringJoiner a = new StringJoiner(&quot;,&quot;);</span><br><span class="line">StringJoiner a = new StringJoiner(&quot;,&quot;, &quot;[&quot;, &quot;]&quot;);</span><br><span class="line">a.add(arrey1);</span><br><span class="line">a.add(arrey2);</span><br><span class="line">sout(a);//你好,朋友</span><br><span class="line">sout(a);//[你好,朋友]</span><br><span class="line"></span><br><span class="line">//ArrayList(集合)(Byte, Short, Character, Integer, Long, Float, Double, Boolean)</span><br><span class="line">ArrayList&lt;String&gt; arrayList = new ArrayList&lt;String&gt;();</span><br><span class="line">arrayList.add(&quot;1&quot;);//添加</span><br><span class="line">arrayList.add(&quot;2&quot;);</span><br><span class="line">arrayList.remove(&quot;2&quot;);//删除</span><br><span class="line">System.out.println(arrayList);//[1]</span><br><span class="line">arrayList.add(&quot;3&quot;);</span><br><span class="line">System.out.println(arrayList.remove(1));//3，删除指定并返回被删除内容</span><br><span class="line">System.out.println(arrayList.set(0, &quot;4&quot;));//1，修改指定返回被修改内容</span><br><span class="line">System.out.println(arrayList.get(0));//4，获取</span><br><span class="line">System.out.println(arrayList.size());//1，长度</span><br></pre></td></tr></table></figure></li>
+</li>
+<li><strong>exif(属性):</strong><ul>
+<li>kali里面exiftool xxx  <br></li>
 </ul>
-<h3 id="14-其他知识点（由于吃过亏，因此记录一下）"><a href="#14-其他知识点（由于吃过亏，因此记录一下）" class="headerlink" title="14.  其他知识点（由于吃过亏，因此记录一下）"></a>14.  其他知识点（由于吃过亏，因此记录一下）</h3><p>如何将字符数组，字节数组转化为字符串： String s &#x3D; new String(chs&#x2F;bytes)<br>&#x3D;&#x3D; 比较引用类型比较的是地址<br>static用于class类公用（与对象无关，类名调用）<br>float定义时数值后加F， long定义时数值后加L<br>main函数可以手动调用</p>
+</li>
+<li><strong>stegsolve （图片隐写分析工具）</strong><ul>
+<li>File Format 文件信息</li>
+<li>Data Extract 数据提取 LSB类题</li>
+<li>Stereogram Solver 图片偏移</li>
+<li>Frame Browser 动图逐帧查看</li>
+<li>Image Combiner 多图拼接  <br></li>
+</ul>
+</li>
+<li><strong>QR_Research（二维码工具）</strong><ul>
+<li>查找二维码信息的工具，选取工具中截图查看二维码  <br></li>
+</ul>
+</li>
+<li><strong>TweakPNG</strong><ul>
+<li><p>TweakPNG是一款简单易用的PNG图像浏览工具，它允许查看和修改一些PNG图像文件的元信息存储。使用场景:文件头正常却无法打开文件，利用TweakPNG修改CRC</p>
+</li>
+<li><p>例:<br>  1.当PNG文件头正常但无法打开文件，可能是CRC校验出错，可以尝试通过TweakPNG打开PNG，会弹出校验错误的提示，这里显示CRC是fe1a5ab6，正确的是b0a7a9f1。打开winhex搜索fe1a5ab6将其改为b0a7a9f1。</p>
+</li>
+<li><p>文件头正常却无法打开文件，利用TweakPNG 修改CRC….<br>  2.有时CRC没有错误，但是图片的高度或者宽度发生了错误，需要通过CRC计算出正确的高度或者宽度。可以用下面的py脚本，需要改文件位置和TweakPNG得到的CRC实际值，用计算出高度，利用01Editor修改宽高</p>
+  <br></li>
+</ul>
+</li>
+<li><strong>Stegdetect工具探测加密方式</strong><ul>
+<li>Stegdetect.程序主要用于分析PEG文件。因此用stegdetect 可以检测到通过Steg、JPHide. OutGuess、Invisible Secrets、F5、appendX和Camouflage等这些隐写工具隐藏的信息。</li>
+<li>stegdetect xxx.jpg</li>
+<li>stegdetect -s 10.0 xxx.jpg  <br></li>
+</ul>
+</li>
+<li><strong>bftools</strong><ul>
+<li>用于解密图片信息。</li>
+<li>使用场景:在windows的cmd下，对加密过的图片文件进行解密格式:</li>
+<li>Bftools .exe decode braincopter要解密的图片名称-output输出文件名</li>
+<li>Bftools.exe run.上一步输出的文件  <br></li>
+</ul>
+</li>
+<li><strong>SilentEye</strong><ul>
+<li>silenteye是一款可以将文字或者文件隐藏到图片的解密工具。</li>
+<li>使用场景: windows下打开silentEye工具，对加密的图片进行解密</li>
+<li>1.使用silentEye程序打开目标图片，点击image一&gt;decode，点击decode，可以查看隐藏文件，点击保存即可</li>
+<li>2.如果需要密码，勾选encrypteddata，输入密码和确认密码，点击decode再解密  <br></li>
+</ul>
+</li>
+<li><strong>Outguess</strong><ul>
+<li>outguess 一般用于解密文件信息。(kali)</li>
+<li>使用场景:Stegdetect识别出来或者题目提示是outguess加密的图片该工具需编译使用: .&#x2F;configure &amp;&amp; make &amp;&amp; make install</li>
+<li>格式: outguess -r 要解密的文件名输出结果文件名  <br></li>
+</ul>
+</li>
+<li><strong>Jphide</strong><ul>
+<li>Jphide是基于最低有效位LSB的JPEG格式图像隐写算法.例:</li>
+<li>Stegdetect提示jphide加密时，可以用Jphs.工具进行解密，打开jphswin.exe， 使用open jpeg打开图片，点击seek，输入密码和确认密码，在弹出文件框中选择要保存的解密文件位置即可，结果保存成txt文件。  <br></li>
+</ul>
+</li>
+<li><strong>F5</strong><ul>
+<li>F5一般用于解密文件信息。</li>
+<li>使用场景: Stegdetect识 别出来是F5加密的图片或题目提示是F5加密的图片</li>
+<li>进入F5-steganography_F5目录，将图片文件拷贝至该目录下，从CMD进入该目录</li>
+<li>格式: Java Exrtact 要解密的文件名 -p 密码<br></li>
+</ul>
+</li>
+</ul>
+<h3 id="3-压缩包文件"><a href="#3-压缩包文件" class="headerlink" title="3. 压缩包文件"></a>3. 压缩包文件</h3><ul>
+<li><strong>伪加密：</strong><ul>
+<li>zip: winhex打开查找50（1） 4B（2） 01（3） 02（4）往后数把9，10改成00 00即可</li>
+<li>rar: winhex打开查找第24个数尾为0即伪加密，改成00，尾为4为加密  <br></li>
+</ul>
+</li>
+<li><strong>ZipCenOp.jar(验证是否为伪加密工具)</strong><ul>
+<li>java -jar ZipCenOp.jar -r file.zip  <br></li>
+</ul>
+</li>
+<li><strong>rar加密爆破解密：</strong><ul>
+<li>1.获取rar压缩包密码hash文件：rar2john file.name &gt; hash</li>
+<li>2.john hash  <br></li>
+</ul>
+</li>
+<li><strong>ARCHPR(rar密码破解工具)</strong>  <br></li>
+<li><strong>Ziperello(zip密码破解工具)</strong><ul>
+<li>使用方式与上面的软件类似，不过这个速度更快，接近准工业级的破解速度了，非常惊人。<br></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-流量分析"><a href="#4-流量分析" class="headerlink" title="4. 流量分析"></a>4. 流量分析</h3><ul>
+<li><strong>WireShark工具的基本使用</strong><ul>
+<li>wireshark的过滤器和过滤规则能够帮助我们迅速定位到要分析的报文。</li>
+<li>常用的过滤命令:</li>
+<li>1.过滤IP，如源IP或者目标x.x.x.x</li>
+<li>ip.src eq x.x.x.x or ip.dst eq x.x.x.x 或者ip.addr eq x.x.x.x  <br></li>
+<li>2.过滤端口</li>
+<li>tcp.port eq 80 or udp.port eq 80</li>
+<li>tcp. dstport &#x3D;&#x3D; 80 只显tcp协议的目标端口为80</li>
+<li>tcp. srcport &#x3D;&#x3D; 80 只显tcp协议的源端口为80</li>
+<li>tcp.port &gt;&#x3D; 1 and tcp.port &lt;&#x3D; 80  <br></li>
+<li>3.过滤协议</li>
+<li>tcp&#x2F;udp&#x2F; arp&#x2F; icmp&#x2F;http&#x2F; ftp&#x2F;dns&#x2F;ip  <br></li>
+<li>4.过滤MAC</li>
+<li>eth.dst &#x3D;&#x3D; A0:00:00:04:C5:84过滤目标mac  <br></li>
+<li>5.包长度过滤</li>
+<li>udp. length &#x3D; &#x3D;&#x3D; 26这个长度是指udp本身固定长度8加上udp下面那块数据包之和。tcp.len&gt;&#x3D; 7指的是ip数据包(tcp下面那块数据)，不包括tcp本身</li>
+<li>ip.len &#x3D;&#x3D; 94 除了以太网头固定长度14，其它都算是ip.len，即从ip本身到最后</li>
+<li>frame.len &#x3D;&#x3D; 119整个数据包长度，从eth开始到最后  <br></li>
+<li>6.http模式过滤</li>
+<li>http.request.method &#x3D;&#x3D; “GET”</li>
+<li>http.request.method &#x3D;&#x3D; “POST”</li>
+<li>http.request.uri &#x3D;&#x3D; “&#x2F;img&#x2F;logo-edu.gif”</li>
+<li>http contains “GET”</li>
+<li>http contains “HTTP&#x2F;1.”</li>
+<li>http.request.method &#x3D;&#x3D; “GET” &amp;&amp; http contains “User-Agent:”</li>
+<li>http contains “flag”</li>
+<li>http contains “key”</li>
+<li>tcp contains “flag”  <br></li>
+<li>7.WireShark 协议分析</li>
+<li>根据数据包特征进行筛选</li>
+<li>比如查看数据包的时候，有的数据包有某种特征，比如有http(80)。就可以筛选出这种特征出来。</li>
+<li>右键→作为过滤器应用→选中  <br></li>
+<li>8.WireShark流汇聚</li>
+<li>在关注的ttp数据包或tcp数据包中选择流汇聚，可以将HTTP流或TCP流汇 聚或还原成数据，在弹出的框中可以看到数据内容。  <br></li>
+<li>9.常见的HTTP流关键内容:</li>
+<li>1、HTML中直接包含重要信息。</li>
+<li>2、上传或下载文件内容，通常包含文件名、hash值等关键信息，常用POST请求上传。</li>
+<li>3、一句话木马，POST请求，内容包含eval，内容使用base64加密  <br></li>
+<li>10.WireShark数据提取</li>
+<li>1.使用wireshark可以自动提取通过htp传输的文件内容。  <br></li>
+<li>11.wireshark可以手动提取文件内容。</li>
+<li>点击想要的数据包，如下图选定media type的位置</li>
+<li>右键→导出分组字节流或者点击菜单栏文件→导出分组字节流，快捷方式Ctrl+H在弹出的框中将文件保存成二进制文件。</li>
+</ul>
+</li>
+</ul>
+<p>[^RUNOOB]: cat 文件名（查看文件内容）</p>
+<h2 id="逆向："><a href="#逆向：" class="headerlink" title="逆向："></a>逆向：</h2><h3 id="IDA-使用"><a href="#IDA-使用" class="headerlink" title="IDA 使用"></a>IDA 使用</h3><ol>
+<li>常用快捷键.<ul>
+<li><strong>f5:</strong> 一键反汇编</li>
+<li><strong>a:</strong> 将数据转换为字符串</li>
+<li><strong>esc:</strong> 回退键，能够倒回上一部操作的视图(只有在反汇编窗口才是这个作用，如果是在其他窗口按下esc,会关闭该窗口)</li>
+<li><strong>shift+f12:</strong> 可以打开string窗口，一键找出所有的字符串，右击setup,还能对窗口的属性进行设置</li>
+<li><strong>shift+e:</strong> 转换为16进制数据</li>
+<li><strong>x:</strong> 对着某个函数、变量按该快捷键，可以查看它的交叉引用</li>
+<li><strong>g:</strong> 直接跳转到某个地址</li>
+<li><strong>n:</strong> 更改变量的名称</li>
+<li><strong>y:</strong> 更改变量的类型.</li>
+<li><strong>&#x2F;:</strong> 在反编译后伪代码的界面中写下注释</li>
+<li><strong>\:</strong> 在反编译后伪代码的界面中隐藏&#x2F;显示变量和函数的类型描述，有时候变量特别多的时候隐藏掉类型描述看起来会轻松很多</li>
+<li><strong>;:</strong> 在反汇编后的界面中写下注释</li>
+<li><strong>u:</strong> undefine, 取消定义函数、代码、数据的定义</li>
+<li><strong>p:</strong> 定义函数</li>
+<li><strong>d:</strong> 改成十进制</li>
+<li><strong>r:</strong> 改成字符</li>
+<li><strong>h:</strong> 改成十六进制</li>
+<li><strong>shift+f7:</strong> 打开segments窗口</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>ExeinfoPe （判断软件版本和是否有壳）</strong><blockquote>
+<p>1、32位还是64位软件<br>2、是否有壳。</p>
+</blockquote>
+</li>
+</ul>
 
       
 
@@ -384,7 +527,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanfengscholar.github.io/023/04/26/Java%E5%AD%A6%E4%B9%A0/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanfengscholar.github.io/024/11/08/CTF/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -398,18 +541,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2023/04/26/Markdown/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/11/08/llama.cpp%E9%83%A8%E7%BD%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Markdown
+          llama.cpp部署
         
       </div>
     </a>
   
   
-    <a href="/2023/04/25/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">欢迎韩枫和韩枫的小伙伴们</div>
+    <a href="/2024/11/08/%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -436,7 +579,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.</span> <span class="toc-text">Java学习</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2023%E5%B9%B42%E6%9C%8817%E6%97%A5-4%E6%9C%882%E6%97%A5%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">2023年2月17日-4月2日：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%89%8D%E8%A8%80%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 前言：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Java%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. Java开发工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-cmd%E5%91%BD%E4%BB%A4"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. cmd命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-java%E5%B7%A5%E5%85%B7Notepad"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. java工具Notepad</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E9%BB%98%E8%AE%A4%E8%A7%84%E5%88%99"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 变量命名默认规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AF%BC%E5%8C%85%E7%B1%BB%EF%BC%88%E8%BF%99%E9%87%8CScanner%E4%B8%BA%E4%BE%8B%E5%AD%90%EF%BC%89"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 导包类（这里Scanner为例子）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%8EC%E7%B1%BB%E4%BC%BC%EF%BC%8C-%E7%94%B1%E4%BA%8E%E6%98%AF%E7%BB%99%E8%87%AA%E5%B7%B1%E7%9C%8B%E7%9A%84%EF%BC%8C-%E5%8F%AA%E5%86%99%E4%B8%8D%E4%B8%80%E6%A0%B7%E7%9A%84%EF%BC%89"><span class="toc-number">1.1.7.</span> <span class="toc-text">7. 语法（与C类似， 由于是给自己看的， 只写不一样的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%9E%84%E9%80%A0%E5%99%A8"><span class="toc-number">1.1.8.</span> <span class="toc-text">8. 构造器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E7%BB%A7%E6%89%BF"><span class="toc-number">1.1.9.</span> <span class="toc-text">9. 继承</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E6%8E%A5%E5%8F%A3-interface"><span class="toc-number">1.1.10.</span> <span class="toc-text">10. 接口(interface)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%A4%9A%E6%80%81"><span class="toc-number">1.1.11.</span> <span class="toc-text">11. 多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E5%86%85%E9%83%A8%E7%B1%BB"><span class="toc-number">1.1.12.</span> <span class="toc-text">12. 内部类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E5%BC%82%E5%B8%B8"><span class="toc-number">1.1.13.</span> <span class="toc-text">13. 异常</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Exception%E5%88%86%E4%B8%BA%EF%BC%9A"><span class="toc-number">1.1.13.0.1.</span> <span class="toc-text">Exception分为：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="toc-number">1.1.13.0.2.</span> <span class="toc-text">异常的作用：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%A4%84%E7%90%86"><span class="toc-number">1.1.13.0.3.</span> <span class="toc-text">异常的处理</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="toc-number">1.1.13.0.4.</span> <span class="toc-text">自定义异常</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E5%87%BD%E6%95%B0%E7%8E%AF%E8%8A%82"><span class="toc-number">1.1.14.</span> <span class="toc-text">14. 函数环节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86%E7%82%B9%EF%BC%88%E7%94%B1%E4%BA%8E%E5%90%83%E8%BF%87%E4%BA%8F%EF%BC%8C%E5%9B%A0%E6%AD%A4%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B%EF%BC%89"><span class="toc-number">1.1.15.</span> <span class="toc-text">14.  其他知识点（由于吃过亏，因此记录一下）</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CTF"><span class="toc-number">1.</span> <span class="toc-text">CTF</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%82%E9%A1%B9%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">杂项：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%96%87%E4%BB%B6%E7%B1%BB"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 文件类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E7%A6%BB%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.1.1.0.1.</span> <span class="toc-text">分离文件：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%88%E5%B9%B6%E6%96%87%E4%BB%B6%EF%BC%9A"><span class="toc-number">1.1.1.0.2.</span> <span class="toc-text">合并文件：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%AD%94%E6%A1%88%E9%A2%98%EF%BC%9A"><span class="toc-number">1.1.1.0.3.</span> <span class="toc-text">查找答案题：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9B%BE%E7%89%87%E9%9A%90%E5%86%99%E7%B1%BB"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 图片隐写类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%8E%8B%E7%BC%A9%E5%8C%85%E6%96%87%E4%BB%B6"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 压缩包文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 流量分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%86%E5%90%91%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">逆向：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IDA-%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.1.</span> <span class="toc-text">IDA 使用</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
