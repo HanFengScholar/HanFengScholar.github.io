@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2024/11 | 韩枫的博客</title>
+  <title>linux搭建elasticsearch | 韩枫的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="韩枫的博客">
-<meta property="og:url" content="http://example.com/archives/2024/11/index.html">
+  <meta name="description" content="使用ubuntu搭建elasticsearch单节点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux搭建elasticsearch">
+<meta property="og:url" content="http://example.com/2024/11/14/linux%E6%90%AD%E5%BB%BAelasticsearch/index.html">
 <meta property="og:site_name" content="韩枫的博客">
+<meta property="og:description" content="使用ubuntu搭建elasticsearch单节点">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-11-14T08:01:07.805Z">
+<meta property="article:modified_time" content="2024-11-14T10:27:19.951Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -163,156 +167,203 @@
           </div>
           <div id="js-content" class="content-ll">
             
+<article id="post-linux搭建elasticsearch" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      linux搭建elasticsearch
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2024" class="archive-year">2024</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/11/14/linux%E6%90%AD%E5%BB%BAelasticsearch/" class="archive-article-date">
+
+        <!--显示阅读次数-->
+        
+        <br/>
+        <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+        <span class="icon-sort"></span>
+        <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+                  阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+        </span>
+        </a>
+        
+        
+        <a href="/2024/11/14/linux%E6%90%AD%E5%BB%BAelasticsearch/" class="archive-article-date">
   	<time datetime="2024-11-14T08:01:07.805Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/14/linux%E6%90%AD%E5%BB%BAelasticsearch/">linux搭建elasticsearch</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用ubuntu搭建elasticsearch单节点"><a href="#使用ubuntu搭建elasticsearch单节点" class="headerlink" title="使用ubuntu搭建elasticsearch单节点"></a>使用ubuntu搭建elasticsearch单节点</h1><span id="more"></span>
 
-        <div class="article-info info-on-right">
-          
-          
+<h2 id="2024-11-14："><a href="#2024-11-14：" class="headerlink" title="2024.11.14："></a>2024.11.14：</h2><h3 id="全文搜索引擎-Elasticsearch-入门教程"><a href="#全文搜索引擎-Elasticsearch-入门教程" class="headerlink" title="全文搜索引擎 Elasticsearch 入门教程"></a><a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2017/08/elasticsearch.html">全文搜索引擎 Elasticsearch 入门教程</a></h3><h3 id="ES集群部署"><a href="#ES集群部署" class="headerlink" title="ES集群部署"></a><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_68033186/article/details/137294608">ES集群部署</a></h3><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>  <strong>安装 Elastic:</strong></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.16.0-linux-x86_64.tar.gz</span><br><span class="line">tar elasticsearch-8.16.0-linux-x86_64.tar.gz</span><br><span class="line">cd elasticsearch-8.16.0-linux-x86_64/ </span><br></pre></td></tr></table></figure>
 
+<p>  <strong>启动 Elastic：</strong></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/elasticsearch</span><br></pre></td></tr></table></figure>
+
+<p>  <strong>如果这时报错”max virtual memory areas vm.maxmapcount [65530] is too low”：</strong></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sysctl -w vm.max_map_count=262144</span><br></pre></td></tr></table></figure>
+
+<p>  <strong>如果一切正常，Elastic 就会在默认的9200端口运行</strong></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$ curl localhost:9200</span><br><span class="line">&#123;</span><br><span class="line">  &quot;name&quot; : &quot;atntrTf&quot;,</span><br><span class="line">  &quot;cluster_name&quot; : &quot;elasticsearch&quot;,</span><br><span class="line">  &quot;cluster_uuid&quot; : &quot;tf9250XhQ6ee4h7YI11anA&quot;,</span><br><span class="line">  &quot;version&quot; : &#123;</span><br><span class="line">    &quot;number&quot; : &quot;5.5.1&quot;,</span><br><span class="line">    &quot;build_hash&quot; : &quot;19c13d0&quot;,</span><br><span class="line">    &quot;build_date&quot; : &quot;2017-07-18T20:44:24.823Z&quot;,</span><br><span class="line">    &quot;build_snapshot&quot; : false,</span><br><span class="line">    &quot;lucene_version&quot; : &quot;6.6.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;tagline&quot; : &quot;You Know, for Search&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>  <strong>遇到卡住不动[red]问题：</strong></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vim config/elasticsearch.yml</span><br><span class="line"># 禁用 HTTP SSL</span><br><span class="line">xpack.security.http.ssl.enabled: false</span><br><span class="line"># 禁用集群间的 SSL</span><br><span class="line">xpack.security.transport.ssl.enabled: false</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/Photo_0426_3a.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/Photo_0426_1a.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://hanfengscholar.github.io/024/11/14/linux%E6%90%AD%E5%BB%BAelasticsearch/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/11/08/qqbot/" class="archive-article-date">
-  	<time datetime="2024-11-08T11:30:42.134Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2024/11/08/qqbot/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">qqbot部署</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/08/qqbot/">qqbot部署</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ubuntu%E6%90%AD%E5%BB%BAelasticsearch%E5%8D%95%E8%8A%82%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">使用ubuntu搭建elasticsearch单节点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2024-11-14%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">2024.11.14：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A8%E6%96%87%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E-Elasticsearch-%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B"><span class="toc-number">1.1.1.</span> <span class="toc-text">全文搜索引擎 Elasticsearch 入门教程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ES%E9%9B%86%E7%BE%A4%E9%83%A8%E7%BD%B2"><span class="toc-number">1.1.2.</span> <span class="toc-text">ES集群部署</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.2.</span> <span class="toc-text">安装</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/11/08/llama.cpp%E9%83%A8%E7%BD%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2024-11-08T09:20:12.108Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-08</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/08/llama.cpp%E9%83%A8%E7%BD%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/">llama.cpp部署</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/11/08/CTF/" class="archive-article-date">
-  	<time datetime="2024-11-08T09:20:12.104Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/08/CTF/">CTF基础（非常非常基础）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2024/11/08/%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2024-11-08T09:20:12.100Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-11-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2024/11/08/%E5%AD%A6%E4%B9%A0/">学习笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -341,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
