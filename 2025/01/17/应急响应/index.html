@@ -16,7 +16,7 @@
 <meta property="og:description" content="应急响应及中间件＋项目实战">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-01-16T16:38:46.815Z">
-<meta property="article:modified_time" content="2025-01-16T16:44:47.750Z">
+<meta property="article:modified_time" content="2025-01-16T17:13:20.391Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -200,11 +200,11 @@
         <h1 id="应急响应及中间件＋项目实战"><a href="#应急响应及中间件＋项目实战" class="headerlink" title="应急响应及中间件＋项目实战"></a>应急响应及中间件＋项目实战</h1><span id="more"></span>
 
 <hr>
-<h3 id="1-Windows"><a href="#1-Windows" class="headerlink" title="1. Windows"></a>1. Windows</h3><h4 id="1-1-SID为操作系统的身份证明"><a href="#1-1-SID为操作系统的身份证明" class="headerlink" title="1.1 SID为操作系统的身份证明"></a>1.1 SID为操作系统的身份证明</h4><p>Administrators组账户的SID为S-1-5-32-544，由4个“-”符号将整个SID分隔为5<br>组字符和数字，其中:</p>
+<h3 id="1-Windows"><a href="#1-Windows" class="headerlink" title="1. Windows"></a>1. Windows</h3><h4 id="1-1-SID为操作系统的身份证明"><a href="#1-1-SID为操作系统的身份证明" class="headerlink" title="1.1 SID为操作系统的身份证明"></a>1.1 SID为操作系统的身份证明</h4><p>Administrators组账户的SID为S-1-5-32-544，由4个“-”符号将整个SID分隔为5组字符和数字，其中:</p>
 <blockquote>
 <p>字母S表示该串字符是一个SID;<br>数字1表示SID的修订级别;<br>数字5表示SID的颁发机构，5代表NTAuthority;<br>数字32表示SID的域标识符，32代表“内置”;<br>数字544表示SID的相对标识符，544代表Administrators。</p>
 </blockquote>
-<p><strong>由用户创建的用户账户的SID的组成结构与系统内置账户的SID类似，但是SID的长<br>度通常会更长。例如，下面就是一个由用户创建的用户账户的SID。</strong></p>
+<p><strong>由用户创建的用户账户的SID的组成结构与系统内置账户的SID类似，但是SID的长度通常会更长。例如，下面就是一个由用户创建的用户账户的SID。</strong></p>
 <blockquote>
 <p>S-1-5-21-2319884204-2662211735-595857245-1001</p>
 </blockquote>
@@ -214,14 +214,14 @@
 </blockquote>
 <p><strong>查看SID：</strong></p>
 <blockquote>
-<p>在ProfileList 下，你会看到多个子键，每个子键的名称就是一个用户的SID。点击每个子键，可以在右<br>侧窗格中看到ProfileImagePath，它显示了对应的用户配置文件路径，从而帮助你确定哪个SID 对应哪个用户。</p>
+<p>在ProfileList 下，你会看到多个子键，每个子键的名称就是一个用户的SID。点击每个子键，可以在右侧窗格中看到ProfileImagePath，它显示了对应的用户配置文件路径，从而帮助你确定哪个SID 对应哪个用户。</p>
 </blockquote>
 <p><strong>可以通过命令查看：</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wmic useraccount get name,sid</span><br><span class="line"><span class="built_in">whoami</span> /user</span><br></pre></td></tr></table></figure>
 
 <h4 id="1-3-管理计算机账户"><a href="#1-3-管理计算机账户" class="headerlink" title="1.3 管理计算机账户"></a>1.3 管理计算机账户</h4><p><strong>使用命令“net user”，其可以对账户进行创建、删除等操作</strong><br><strong>使用命令“net localgroup”则可用于组的査看、创建、删除，还可以将账户加入到指定的组当中(加入管理员组需要响应权限)</strong></p>
 <blockquote>
-<p>在渗透Windows操作系统时，当黑客拿到shell以后首先会使用相关命令查看所<br>处于的用户与组，从而检查所拥有的的权限，然后才经过“系统提权”拿到管理员<br>执行权限并创建用户。</p>
+<p>在渗透Windows操作系统时，当黑客拿到shell以后首先会使用相关命令查看所处于的用户与组，从而检查所拥有的的权限，然后才经过“系统提权”拿到管理员执行权限并创建用户。</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">添加账号dhf,密码为123修改为456，并删除：</span><br><span class="line">net user dhf 123 /add</span><br><span class="line">net user dhf 456</span><br><span class="line">net user dhf</span><br><span class="line">net user dhf /del</span><br><span class="line"></span><br><span class="line">net localgroup dhf /add</span><br><span class="line">net localgroup dhf /del</span><br></pre></td></tr></table></figure>
 
@@ -260,13 +260,13 @@
 <li><strong>周知端口(Well Known Ports)</strong></li>
 </ul>
 <blockquote>
-<p>周知端口是众所周知的端口号，范围从0到1023,其中80端口分配给ww服务,21端口分配<br>给FTP服务等。我们在IE的地址栏里输入一个网址的时候(比如<a target="_blank" rel="noopener" href="http://www.baidu.com)是不必指定/">www.baidu.com)是不必指定</a><br>端口号的，因为在默认情况下www服务的端口号是“80”</p>
+<p>周知端口是众所周知的端口号，范围从0到1023,其中80端口分配给ww服务,21端口分配给FTP服务等。我们在IE的地址栏里输入一个网址的时候(比如<a target="_blank" rel="noopener" href="http://www.baidu.com)是不必指定端口号的,因为在默认情况下www服务的端口号是“80”/">www.baidu.com)是不必指定端口号的，因为在默认情况下www服务的端口号是“80”</a></p>
 </blockquote>
 <ul>
 <li><strong>动态端口(Dynamic Ports)</strong></li>
 </ul>
 <blockquote>
-<p>动态端口的范围是从1024到65535之所以称为动态端口,，是因为它一般不固定分配某种<br>服务，而是动态分配。动态分配指当一个系统进程或应用程序进程需要网络通信时，它向主<br>机申请一个端口，主机从可用的端口号中分配一个供它使用。</p>
+<p>动态端口的范围是从1024到65535之所以称为动态端口,，是因为它一般不固定分配某种服务，而是动态分配。动态分配指当一个系统进程或应用程序进程需要网络通信时，它向主机申请一个端口，主机从可用的端口号中分配一个供它使用。</p>
 </blockquote>
 <ul>
 <li><strong>使用netstat命令查看端口状态情况，该命令与Linux类似</strong></li>
@@ -316,7 +316,7 @@
 <p>在安全检查中需要着重注意该文件的权限，默认情况下&#x2F;etc&#x2F;passwd权限为0644。使用命令“stat &#x2F;etc&#x2F;passwd”进行检查，如果该文件的权限和属主发生了变化，则可能代表发生了异常情况(例如误操作或入侵事件)，需引起注意。</p>
 </blockquote>
 <h4 id="2-2-x2F-etc-x2F-shadow"><a href="#2-2-x2F-etc-x2F-shadow" class="headerlink" title="2.2 &#x2F;etc&#x2F;shadow"></a>2.2 &#x2F;etc&#x2F;shadow</h4><blockquote>
-<p>Linux&#x2F;UNIX广泛采用了“shadow(影子)文件”机制，将加密的口令转移到&#x2F;etc&#x2F;shadow文<br>件里，该文件只为root超级用户可读，而同时&#x2F;etc&#x2F;passwd文件的密文域显示为一个x，从<br>而最大限度地减少了密文泄露的机会。</p>
+<p>Linux&#x2F;UNIX广泛采用了“shadow(影子)文件”机制，将加密的口令转移到&#x2F;etc&#x2F;shadow文件里，该文件只为root超级用户可读，而同时&#x2F;etc&#x2F;passwd文件的密文域显示为一个x，从而最大限度地减少了密文泄露的机会。</p>
 </blockquote>
 <table>
 <thead>
@@ -411,14 +411,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum -y install httpd php php-mysql mariadb-server mariadb</span><br><span class="line">systemctl start httpd &amp;&amp; systemctl <span class="built_in">enable</span> httpd</span><br><span class="line">systemctl start mariadb &amp;&amp; systemctl <span class="built_in">enable</span> mariadb</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>在安装完成LAMP后，可以将开发的PHP网站放入默认&#x2F;var&#x2F;www&#x2F;html路径中，再通过客户端访问，<br>打开公司网站页面，即可对外提供web访问服务</p>
-</blockquote>
-<blockquote>
-<p>Apache是由root 启动，如果Apache Server进程具有root用户特权，应确保Apache Server进程以最可能低的权限用户来运行。通过修改httpd.conf文件中的下列选项，以Nobody用户运行Apache 达到相对安全的目的。<br>以特定用户运行服务，禁止使用系统管理员启动apache，修改网站根目录拥有者为apache。防止越权<br>使用被入侵者利用，造成失陷。</p>
+<p>在安装完成LAMP后，可以将开发的PHP网站放入默认&#x2F;var&#x2F;www&#x2F;html路径中，再通过客户端访问，打开公司网站页面，即可对外提供web访问服务<br>Apache是由root 启动，如果Apache Server进程具有root用户特权，应确保Apache Server进程以最可能低的权限用户来运行。通过修改httpd.conf文件中的下列选项，以Nobody用户运行Apache 达到相对安全的目的。<br>以特定用户运行服务，禁止使用系统管理员启动apache，修改网站根目录拥有者为apache。防止越权使用被入侵者利用，造成失陷。</p>
 </blockquote>
 <h4 id="3-2-Tomcat中间件"><a href="#3-2-Tomcat中间件" class="headerlink" title="3.2 Tomcat中间件"></a>3.2 Tomcat中间件</h4><p>Tomcat 服务器是一个免费的开放源代码的 Web 应用服务器，属于轻量级应用服务器在中小型系统和并发访问用户不是很多的场合下被普遍使用是开发和调试 JSP 程序的首选</p>
 <blockquote>
-<p>Tomcat有两种安装方式，一种是直接解压就可以使用的二进制文件，第二种是编译安装，我们这里采<br>用了第一种方法，下载的tomcat软件直接解压就可以执行的二进制文件，因为在官方默认下载的便是<br>使用第一种方法安装</p>
+<p>Tomcat有两种安装方式，一种是直接解压就可以使用的二进制文件，第二种是编译安装，我们这里采用了第一种方法，下载的tomcat软件直接解压就可以执行的二进制文件，因为在官方默认下载的便是使用第一种方法安装</p>
 </blockquote>
 <h4 id="3-3-Nginx中间件"><a href="#3-3-Nginx中间件" class="headerlink" title="3.3 Nginx中间件"></a>3.3 Nginx中间件</h4><p>Nginx是一款轻量级的Web服务器&#x2F;反向代理服务器及电子邮件服务器，特点是占有内存少，并发能力强</p>
 <p><strong>Nginx安装：yum –y install nginx</strong></p>
@@ -449,7 +446,7 @@
 </li>
 </ul>
 <p><strong>4.2.4 启动项</strong></p>
-<p>启动项是开机时系统在前台或者后台运行的程序。操作系统在启动时，通常会加载很多程序，启动项<br>是病毒后门等实现持久化驻留的一种常用方法，在应急响应中排查的必要项目。在Windowx系统中自<br>启动的文件是按照2个文件夹和5个核心注册表的子健来自启动加载程序的。</p>
+<p>启动项是开机时系统在前台或者后台运行的程序。操作系统在启动时，通常会加载很多程序，启动项是病毒后门等实现持久化驻留的一种常用方法，在应急响应中排查的必要项目。在Windowx系统中自启动的文件是按照2个文件夹和5个核心注册表的子健来自启动加载程序的。</p>
 <ul>
 <li><p>win+r，输入msconfig系统配置查看</p>
 </li>
@@ -725,12 +722,12 @@
 <ul>
 <li>通过图形化的内置筛选器进行分析：使用日志筛选器可以对记录时间、事件级别、任务类别、关键字等信息进行筛选</li>
 <li>通过PowerShell对日志进行分析：get-eventlog security -instanceid 4625 但需要管理员权限获取安全性日志下事件ID为4625(失败登录)的所有日志信息:</li>
-<li>通过第三方工具进行日志分析<blockquote>
+<li>通过第三方工具进行日志分析</li>
+</ul>
+<blockquote>
 <p>Log Parser:Log Parser是微软公司推出的日志分析工具，可以分析基于文本的日志文件、XML文件、CSV(逗号分隔符)文件，以及操作系统的事件日志、注册表、文件系统、Active Directory等。其可以像使用SQL语句一样查询分析数据，甚至可以把分析结果以各种图表的形式展现出来。</p>
 </blockquote>
-</li>
-</ul>
-<h4 id="4-11-威胁情报"><a href="#4-11-威胁情报" class="headerlink" title="4.11 威胁情报"></a>4.11 威胁情报</h4><p>在应急响应过程中，威胁情报分析可以对相似的恶意元素进行查询。结合威胁情报可以多维度快速地<br>了解攻击者的信息，这些信息包括文件hash值、IP地址、域名、网络或主机特征、攻击工具。其中<br>以下基于文件hash值获取的恶意文件的信息:</p>
+<h4 id="4-11-威胁情报"><a href="#4-11-威胁情报" class="headerlink" title="4.11 威胁情报"></a>4.11 威胁情报</h4><p>在应急响应过程中，威胁情报分析可以对相似的恶意元素进行查询。结合威胁情报可以多维度快速地了解攻击者的信息，这些信息包括文件hash值、IP地址、域名、网络或主机特征、攻击工具。其中以下基于文件hash值获取的恶意文件的信息:</p>
 <p><strong>以下为国内外主流的威胁情报在线分析平台:</strong></p>
 <p>微步在线：  <a target="_blank" rel="noopener" href="https://x.threatbook.cn/">https://x.threatbook.cn/</a><br>360威胁情报中心：  <a target="_blank" rel="noopener" href="https://ti.360.net/">https://ti.360.net/</a><br>奇安信威胁情报中心：   <a target="_blank" rel="noopener" href="https://ti.qianxin.com/">https://ti.qianxin.com/</a><br>VenusEye威胁情报中心：<a target="_blank" rel="noopener" href="https://www.venuseye.com.cn/">https://www.venuseye.com.cn/</a><br>安天威胁情报中心：   <a target="_blank" rel="noopener" href="https://www.antiycloud.com/">https://www.antiycloud.com/</a><br>深信服安全中心：     <a target="_blank" rel="noopener" href="https://wiki.sec.sangfor.com.cn/index/abroad">https://wiki.sec.sangfor.com.cn/index/abroad</a><br>安恒威胁情报中心：<a target="_blank" rel="noopener" href="https://ti.dbappsecurity.com.cn/">https://ti.dbappsecurity.com.cn/</a><br>NTI 威胁情报中心：   <a target="_blank" rel="noopener" href="https://ti.nsfocus.com/">https://ti.nsfocus.com/</a><br>VirusTotal：  <a target="_blank" rel="noopener" href="https://www.virustotal.com/gui/home/upload">https://www.virustotal.com/gui/home/upload</a><br>Threatcrowd 开源威胁情报：    <a target="_blank" rel="noopener" href="https://www.threatcrowd.org/">https://www.threatcrowd.org/</a><br>GreyNoise：	<a target="_blank" rel="noopener" href="https://www.greynoise.io/">https://www.greynoise.io/</a></p>
 <h3 id="5-Linux应急响应"><a href="#5-Linux应急响应" class="headerlink" title="5. Linux应急响应"></a>5. Linux应急响应</h3><p><strong>Linux攻击方式：</strong></p>
